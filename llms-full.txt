@@ -1,0 +1,623 @@
+# Willrun
+
+> Willrun answers whether a specific portable power station or generator can run a specific appliance, using published running and starting watts, an 85% inverter allowance for stations, and 30 amp inlet math for home backup.
+
+Willrun is a static site. Every station and appliance row cites a manufacturer or ENERGY STAR URL. Runtime is nameplate watt-hours times 0.85, divided by average draw. Verdicts are runs, runs with surge risk, won't run, or no run verdict when running watts were not published.
+
+## Start here
+- [Calculator](https://willitrunpower.com/): pick a station, add appliances, read the verdict.
+- [Methodology](https://willitrunpower.com/methodology): the 0.85 allowance, duty cycle, and how surge is treated.
+- [Stations](https://willitrunpower.com/stations): 24 models.
+- [Appliances](https://willitrunpower.com/appliances): 40 loads.
+- [Affiliate disclosure](https://willitrunpower.com/disclosure)
+
+## Guides
+- [Best power station for a fridge](https://willitrunpower.com/best-power-station-for/fridge): For the Danby 3.2 cu ft fridge with a published 66.4 W draw, every station in this set can cover the running watts, and the longest runtimes belong to the largest packs — but startup watts were not published, so every one of those answers is a surge risk.
+- [Best power station for a CPAP](https://willitrunpower.com/best-power-station-for/cpap): Every station in this set can run an AirSense 11 at the user guide's 56.1 W typical and 73.2 W peak, and the longest nights come from the largest packs, not the highest inverter rating.
+- [Best power station for camping](https://willitrunpower.com/best-power-station-for/camping): For a carried campsite, the EcoFlow RIVER 2 (7.7 lb, 256 Wh) and Anker SOLIX C300 (288 Wh) cover a CPAP and lights; a Danby compact fridge pushes you toward the RIVER 2 Pro, DELTA 2, or AC180 if you can spare the weight.
+- [Best power station for an RV](https://willitrunpower.com/best-power-station-for/rv): An 8,000 Btu/h BLACK+DECKER window unit draws about 533 W while cooling. Stations at or above 600 W continuous can hold that running load, and the DELTA Pro 3 and F3800 add 120/240 V outlets the smaller packs do not have. None of them publish a match for the compressor's startup watts.
+- [Best power station for home backup](https://willitrunpower.com/best-power-station-for/home-backup): On stored energy alone, the EcoFlow DELTA Pro 3 (4,096 Wh) outlasts the Anker SOLIX F3800 (3,840 Wh), while the F3800 has the higher continuous output at 6,000 W. A 1,500 W Lasko heater needs at least 1,500 W continuous or a documented resistive boost.
+- [Best power station for a sump pump](https://willitrunpower.com/best-power-station-for/sump-pump): The Zoeller Model 53 at 115 V draws 1,115.5 W while running. Stations under that — including the RIVER 2 series, the AC70, and the Yeti 500X — will not hold it. Stations above it still carry a surge risk because Zoeller does not publish starting amps.
+
+## Outages
+- [24-hour outage](https://willitrunpower.com/outage/24-hour): EcoFlow DELTA 2 Max, EcoFlow DELTA Pro 3, BLUETTI AC200L, Jackery Explorer 2000 Plus, Jackery Explorer 2000 v2, Anker SOLIX F2000 (PowerHouse 767), Anker SOLIX F3800 have enough nameplate watt-hours, after the 85% allowance, for this 24-hour mix (1,608 Wh of load).
+- [3-day outage](https://willitrunpower.com/outage/3-day): No base unit in this set stores enough for this mix. The load is 4,823 Wh, which needs about 5,675 Wh of nameplate capacity after the 85% allowance, and nothing here is that large without an extra battery.
+
+## Comparisons
+- [EcoFlow DELTA 2 vs BLUETTI AC180](https://willitrunpower.com/vs/ecoflow-delta-2-vs-bluetti-ac180)
+- [EcoFlow DELTA 2 vs Jackery Explorer 1000 v2](https://willitrunpower.com/vs/ecoflow-delta-2-vs-jackery-explorer-1000-v2)
+- [EcoFlow DELTA 2 vs Anker SOLIX C1000](https://willitrunpower.com/vs/ecoflow-delta-2-vs-anker-solix-c1000)
+- [EcoFlow DELTA 3 Plus vs EcoFlow DELTA 2](https://willitrunpower.com/vs/ecoflow-delta-3-plus-vs-ecoflow-delta-2)
+- [EcoFlow DELTA 2 Max vs Jackery Explorer 2000 Plus](https://willitrunpower.com/vs/ecoflow-delta-2-max-vs-jackery-explorer-2000-plus)
+- [EcoFlow DELTA 2 Max vs Anker SOLIX F2000 (PowerHouse 767)](https://willitrunpower.com/vs/ecoflow-delta-2-max-vs-anker-solix-f2000)
+- [Jackery Explorer 1000 Plus vs Anker SOLIX C1000](https://willitrunpower.com/vs/jackery-explorer-1000-plus-vs-anker-solix-c1000)
+- [EcoFlow RIVER 2 vs Anker SOLIX C300](https://willitrunpower.com/vs/ecoflow-river-2-vs-anker-solix-c300)
+- [EcoFlow RIVER 2 Pro vs BLUETTI AC70](https://willitrunpower.com/vs/ecoflow-river-2-pro-vs-bluetti-ac70)
+- [Goal Zero Yeti 1500X vs EcoFlow DELTA 2 Max](https://willitrunpower.com/vs/goal-zero-yeti-1500x-vs-ecoflow-delta-2-max)
+- [Anker SOLIX F3800 vs EcoFlow DELTA Pro 3](https://willitrunpower.com/vs/anker-solix-f3800-vs-ecoflow-delta-pro-3)
+- [Jackery Explorer 2000 v2 vs Jackery Explorer 2000 Plus](https://willitrunpower.com/vs/jackery-explorer-2000-v2-vs-jackery-explorer-2000-plus)
+
+## Data
+- [stations.json](https://willitrunpower.com/data/stations.json)
+- [appliances.json](https://willitrunpower.com/data/appliances.json)
+- [links.json](https://willitrunpower.com/data/links.json): affiliate hrefs. Null means the Check price button opens the manufacturer page.
+
+Full text for answer pages: https://willitrunpower.com/llms-full.txt
+
+# Methodology
+
+## What a verdict means
+
+Runs means the published running watts fit the station's continuous AC output, and any published appliance peak also fits the surge figure Willrun is willing to treat as a motor start.
+
+Runs, surge risk means the running watts fit, but startup watts were not published for a compressor, pump, or tool, or a published peak is above the motor-surge limit. A fan is marked surge risk only when its running watts are more than half the continuous output.
+
+Won't run means the running watts are above continuous output and the load is not a simple heater that fits a documented resistive boost. Runtime is left blank in that case.
+
+No run verdict means running watts were not published. An hour figure on those rows is only an energy budget from a published annual average. It is not a claim that the inverter can start the appliance.
+
+## Runtime
+
+Usable watt-hours are nameplate capacity times 0.85. That 0.85 is a Willrun allowance for inverter loss. It is not a measured efficiency for any model, and there is no extra idle-draw term.
+
+Runtime is usable watt-hours divided by average draw. Average draw is the stored average when one exists, otherwise running watts times a duty cycle, otherwise the running watts themselves.
+
+A combined calculator load uses the worst individual verdict. If the sum of running watts is above continuous output, and the loads are not all simple heaters inside a resistive boost, the mix will not run. Combined runtime uses the sum of average draws.
+
+## Duty cycle
+
+A fridge duty cycle is stored only when the maker published both a wattage and an annual kWh figure. Average watts are annual kWh times 1,000 divided by 8,760. Duty cycle is that average divided by the published wattage. The label on those pages calls it an annual average, not a hot-day measurement.
+
+Window air conditioners and dehumidifiers are not given a duty cycle. Their watt figures are the draw at the rated test condition. A sump pump has no duty cycle because how often the float runs depends on the inflow, which was not published.
+
+## Derived watts
+
+Window-unit running watts are Btu/h divided by the published CEER. That result matches the ENERGY STAR annual kWh figure at the DOE room-air-conditioner assumption of 750 hours, so it is used as rated cooling input. CEER is not a pure EER, and startup watts are still unpublished, so the verdict stays a surge risk.
+
+Dehumidifier running watts come from pints per day times 0.473176 liters per pint, divided by 24 hours, divided by the integrated energy factor, times 1,000. That is the draw while the unit is removing water at the rated rate, not a whole-year average.
+
+The Zoeller Model 53 running figure is 9.7 A times 115 V. The product page lists 4.8–9.7 A because the model is sold for 115 V and 230 V. The 9.7 A row is the 115 V automatic model in Zoeller's 50-series table.
+
+## Surge, X-Boost, Power Lifting, and SurgePad
+
+A published surge is used for motors only when the maker states it separately from a heater-only mode. X-Boost, Power Lifting, and SurgePad are stored as a resistive boost. They apply only when the appliance is a simple resistive heater and the element is between continuous output and that boost rating. Voltage can sag in that mode.
+
+Microwaves and induction cooktops are electronics. They are not boost-eligible. A fan, a fridge, a window air conditioner, a dehumidifier, and a pump are not boost-eligible either.
+
+EcoFlow's RIVER 2, RIVER 2 Max, RIVER 2 Pro, and RIVER 3 Plus publish a surge figure that is the same as X-Boost and is described for heating devices, so it is not used as motor-start capacity. The DELTA 2's 2,700 W surge appears on a 230 V manual line and is not used for the 120 V model. BLUETTI's AC180 lists a 2,700 W surge that the FAQ treats as Power Lifting and tells owners not to use for an air conditioner or a washer, so it is not used for motors. The AC70's 1,500 W surge is kept for motors; its 2,000 W lifting mode is resistive only. Anker's C300 headline surge matches the FAQ's SurgePad description, so it is a boost. The Goal Zero Yeti 1000X page disagrees with itself on surge (3,000 W and 3,500 W), so surge is omitted.
+
+## What was left out
+
+Specs that could not be read on a manufacturer page or an ENERGY STAR record were left blank or the model was dropped. Launch prices were not on the pages used, so every launch price is empty. Current shelf prices were not copied in.
+
+Official pages for several smaller or newer stations did not resolve to a usable spec table, including Jackery Explorer 300 Plus, 600 Plus, and 500 v2, a Jackery 3000 Pro URL that opened a different product, and BLUETTI EB3A and Elite 200 V2 redirects. Those models are not in the set. The Anker F2000 marketing line of 3,600 W was not in the spec table, so it is not stored. A garbled DC voltage line on the DELTA Pro 3 page was omitted.
+
+Common loads without a reputable running-watt source were omitted rather than filled from a generic watt chart: drip coffee makers, well pumps, corded power tools, oxygen concentrators, Starlink, garage-door openers, pellet stoves, box fans, kettles, toasters, slow cookers, rice cookers, hair dryers, air fryers, pressure cookers, electric blankets, and RV roof air conditioners. Full-size refrigerators and chest freezers in this set have ENERGY STAR annual kWh only, so they get no run verdict.
+
+Laptop rows are an adapter maximum or an ENERGY STAR short-idle figure, not a measured full workload. Router watts are the TP-Link Archer AX73 networked-standby figure, not a marketing '3 W router' claim.
+
+# Stations
+
+## EcoFlow RIVER 2
+
+Page: https://willitrunpower.com/station/ecoflow-river-2
+Capacity 256 Wh, continuous 300 W, motor surge not applied, resistive boost X-Boost 600 W, LiFePO4, weight 7.7 lb.
+Source: https://www.ecoflow.com/us/blog/ecoflow-river-series-comparison-features-specs-applications
+US/CA comparison table: 256 Wh, 2 AC outlets at 300 W, X-Boost 600 W, 7.7 lb, LiFePO4, 3,000 cycles to 80%+. EcoFlow describes the 600 W figure as surge with X-Boost. Willrun treats it as a resistive boost, not motor-start capacity. The manual language for X-Boost says it suits heating devices.
+
+## EcoFlow RIVER 2 Max
+
+Page: https://willitrunpower.com/station/ecoflow-river-2-max
+Capacity 512 Wh, continuous 500 W, motor surge not applied, resistive boost X-Boost 1000 W, LiFePO4, weight 13.4 lb.
+Source: https://us.ecoflow.com/products/river-2-max-portable-power-station
+Product spec: 512 Wh and 500 W (surge 1,000 W). The same 1,000 W is the X-Boost rating on EcoFlow's comparison table, which also lists 13.4 lb and 4 AC outlets. Willrun does not treat that 1,000 W as motor-start capacity.
+
+## EcoFlow RIVER 2 Pro
+
+Page: https://willitrunpower.com/station/ecoflow-river-2-pro
+Capacity 768 Wh, continuous 800 W, motor surge not applied, resistive boost X-Boost 1600 W, LiFePO4, weight 17.2 lb.
+Source: https://us.ecoflow.com/products/river-2-pro-portable-power-station
+Product spec: 768 Wh, pure sine wave, 800 W total (surge 1,600 W). Comparison table lists the same 1,600 W as X-Boost, 4 AC outlets, and 17.2 lb. Treated as resistive boost, not motor-start capacity.
+
+## EcoFlow RIVER 3 Plus
+
+Page: https://willitrunpower.com/station/ecoflow-river-3-plus
+Capacity 286 Wh, continuous 600 W, motor surge not applied, resistive boost X-Boost 1200 W, LiFePO4, weight 10.4 lb.
+Source: https://us.ecoflow.com/products/river-3-plus-portable-power-station
+Spec table: 286 Wh, 3 outlets, 600 W total (surge 1,200 W, X-Boost 1,200 W), 10.4 lb, LiFePO4, 3,000 cycles to 80%. Page copy says X-Boost continuously handles 1,200 W heating devices. The shelf price on that page was not used; launch price was not stated.
+
+## EcoFlow DELTA 2
+
+Page: https://willitrunpower.com/station/ecoflow-delta-2
+Capacity 1024 Wh, continuous 1800 W, motor surge not applied, resistive boost X-Boost 2200 W, LiFePO4, weight 27 lb.
+Source: https://www.ecoflow.com/us/delta-2-portable-power-station
+US product page: about 1 kWh, 1,800 W output, X-Boost up to 2,200 W, LiFePO4, 3,000+ cycles. Weight, size, and the 4 AC outlets are from the EcoFlow DELTA 2 user manual. The manual line that pairs 1,800 W with a 2,700 W surge is printed next to 230 V, so that surge is not used for this 120 V entry.
+
+## EcoFlow DELTA 2 Max
+
+Page: https://willitrunpower.com/station/ecoflow-delta-2-max
+Capacity 2048 Wh, continuous 2400 W, motor surge 4800 W, resistive boost X-Boost 3400 W, LiFePO4, weight 50 lb.
+Source: https://us.ecoflow.com/products/delta-2-max-portable-power-station
+US spec table: 2,048 Wh, 6 outlets, 2,400 W total (surge 4,800 W), X-Boost 3,400 W, 50 lb, LFP, 3,000 cycles to 80%+. Surge and X-Boost are separate numbers, so the 4,800 W surge is used for motor checks.
+
+## EcoFlow DELTA 3
+
+Page: https://willitrunpower.com/station/ecoflow-delta-3
+Capacity 1024 Wh, continuous 1800 W, motor surge 3600 W, resistive boost X-Boost 2200 W, LiFePO4, weight 27.6 lb.
+Source: https://us.ecoflow.com/products/delta-3-portable-power-station
+US spec table: 1,024 Wh, 6 outlets, 1,800 W (surge 3,600 W), X-Boost 2,200 W, 27.6 lb, LFP, 4,000 cycles to 80%+. A sale price on the page was not recorded as a launch price.
+
+## EcoFlow DELTA 3 Plus
+
+Page: https://willitrunpower.com/station/ecoflow-delta-3-plus
+Capacity 1024 Wh, continuous 1800 W, motor surge 3600 W, resistive boost X-Boost 2200 W, LiFePO4, weight 27.6 lb.
+Source: https://us.ecoflow.com/products/delta-3-plus-portable-power-station
+US spec table: 1,024 Wh, 6 outlets, 1,800 W (surge 3,600 W), X-Boost 2,200 W, about 12.5 kg (27.6 lb), LFP, 4,000 cycles to 80%+.
+
+## EcoFlow DELTA Pro 3
+
+Page: https://willitrunpower.com/station/ecoflow-delta-pro-3
+Capacity 4096 Wh, continuous 4000 W, motor surge 8000 W, resistive boost X-Boost 6000 W, LiFePO4, weight 113.54 lb.
+Source: https://us.ecoflow.com/products/delta-pro-3-portable-power-station
+US spec block: 4,096 Wh, AC continuous 4,000 W and 6,000 W with X-Boost, AC surge 8,000 W, 51.5 kg (113.54 lb), LFP, 4,000 cycles to 80%.
+
+## BLUETTI AC70
+
+Page: https://willitrunpower.com/station/bluetti-ac70
+Capacity 768 Wh, continuous 1000 W, motor surge 1500 W, resistive boost Power Lifting 2000 W, LiFePO4, weight 22.5 lb.
+Source: https://www.bluettipower.com/products/ac70
+Spec table: 768 Wh, 1,000 W total, surge 1,500 W, about 22.5 lb, LiFePO4, 3,000+ cycles to 80%. Power Lifting to 2,000 W is described for heating devices. The FAQ says not to run an air conditioner or washing machine on lifting mode. A shelf price on the page was not recorded as a launch price.
+
+## BLUETTI AC180
+
+Page: https://willitrunpower.com/station/bluetti-ac180
+Capacity 1152 Wh, continuous 1800 W, motor surge not applied, resistive boost Power Lifting 2700 W, LiFePO4, weight 35.27 lb.
+Source: https://www.bluettipower.com/products/ac180
+Spec table: 1,152 Wh, 4×120 V at 1,800 W, surge listed as 2,700 W, about 35.27 lb, LiFePO4, 3,500+ cycles. The FAQ defines Power Lifting as 2,700 W for heaters, hair dryers, kettles, and blankets, and says not to run an air conditioner or washing machine. Willrun therefore does not treat 2,700 W as motor-start capacity.
+
+## BLUETTI AC200L
+
+Page: https://willitrunpower.com/station/bluetti-ac200l
+Capacity 2048 Wh, continuous 2400 W, motor surge 7200 W, resistive boost Power Lifting 3600 W, LiFePO4, weight 62.4 lb.
+Source: https://www.bluettipower.com/pages/ac200l
+Spec block: 2,048 Wh (51.2 V, 40 Ah), 2,400 W total, Power Lifting 3,600 W, surge 7,200 W, 62.4 lb, LiFePO4, 3,000+ cycles to 80%.
+
+## Jackery Explorer 1000 v2
+
+Page: https://willitrunpower.com/station/jackery-explorer-1000-v2
+Capacity 1070 Wh, continuous 1500 W, motor surge 3000 W, resistive boost none, LiFePO4, weight 23.8 lb.
+Source: https://www.jackery.com/products/jackery-explorer-1000-v2
+Spec block: 30.4 Ah / 35.2 V DC (1,070 Wh), LiFePO4, 4,000 cycles to 70%+, about 23.8 lb, AC total 1,500 W rated and 3,000 W surge peak.
+
+## Jackery Explorer 1000 Plus
+
+Page: https://willitrunpower.com/station/jackery-explorer-1000-plus
+Capacity 1264.64 Wh, continuous 2000 W, motor surge 4000 W, resistive boost none, LiFePO4, weight 32 lb.
+Source: https://www.jackery.com/products/jackery-explorer-1000-plus-portable-power-station
+Spec block: 30.4 Ah / 41.6 V DC (1,264.64 Wh), LiFePO4, 4,000 cycles to 70%+, 32 lb, AC total 2,000 W rated and 4,000 W surge peak.
+
+## Jackery Explorer 2000 Plus
+
+Page: https://willitrunpower.com/station/jackery-explorer-2000-plus
+Capacity 2042.8 Wh, continuous 3000 W, motor surge 6000 W, resistive boost none, LiFePO4, weight 61.5 lb.
+Source: https://www.jackery.com/products/explorer-2000-plus-portable-power-station
+Spec block: 45.6 Ah / 44.8 V DC (2,042.8 Wh), LiFePO4, 4,000 cycles to 70%+, 61.5 lb, AC total 3,000 W max and 6,000 W surge peak.
+
+## Jackery Explorer 2000 v2
+
+Page: https://willitrunpower.com/station/jackery-explorer-2000-v2
+Capacity 2042 Wh, continuous 2200 W, motor surge 4400 W, resistive boost none, LiFePO4, weight 39.5 lb.
+Source: https://www.jackery.com/products/jackery-explorer-2000-v2-portable-power-station
+US spec block: 45.6 Ah / 44.8 V DC (2,042 Wh), LiFePO4, 4,000 cycles to 70%+, around 39.5 lb, AC total 2,200 W rated and 4,400 W surge peak. Jackery's FAQ lists the same 4,400 W as maximum instantaneous output.
+
+## Anker SOLIX C300
+
+Page: https://willitrunpower.com/station/anker-solix-c300
+Capacity 288 Wh, continuous 300 W, motor surge not applied, resistive boost SurgePad 600 W, LiFePO4, weight not published.
+Source: https://www.ankersolix.com/products/c300
+Product page: 288 Wh and 300 W, with 600 W surge in the headline. The FAQ says the AC outlets deliver 300 W rated and 600 W with SurgePad. Willrun treats 600 W as SurgePad, not a separate motor-start rating. Weight and cycle life were not in that text.
+
+## Anker SOLIX C800
+
+Page: https://willitrunpower.com/station/anker-solix-c800
+Capacity 768 Wh, continuous 1200 W, motor surge not applied, resistive boost SurgePad 1600 W, LiFePO4, weight 23.1 lb.
+Source: https://support.ankersolix.com/s/article/Anker-SOLIX-C800-Portable-Power-Station-USER-GUIDE--A1753
+User guide A1753: 768 Wh LiFePO4 cells, AC output 1,200 W max, max device power with SurgePad 1,600 W, net weight 23.1 lb. Cycle life was not in that table. SurgePad is not used as motor-start capacity.
+
+## Anker SOLIX C1000
+
+Page: https://willitrunpower.com/station/anker-solix-c1000
+Capacity 1056 Wh, continuous 1800 W, motor surge 2400 W, resistive boost none, LiFePO4, weight 28.44 lb.
+Source: https://www.ankersolix.com/products/c1000
+Tech specs: 1,056 Wh, LiFePO4, 3,000 cycles to 80%, 1,800 W pure sine wave, 2,400 W AC surge, 6 AC outlets, 28.44 lb. The FAQ says SurgePad is for heat-generating devices when output exceeds the rated output; the 2,400 W figure is the published AC surge.
+
+## Anker SOLIX F2000 (PowerHouse 767)
+
+Page: https://willitrunpower.com/station/anker-solix-f2000
+Capacity 2048 Wh, continuous 2400 W, motor surge not applied, resistive boost none, LiFePO4, weight not published.
+Source: https://www.ankersolix.com/f2000
+Spec block for model A1780: 2,048 Wh, LFP, 3,000 cycles, AC output 2,400 W max. A separate surge rating and the weight were not in that spec block, so neither is used. A marketing line about 3,600 W was not in the spec table and is omitted.
+
+## Anker SOLIX F3800
+
+Page: https://willitrunpower.com/station/anker-solix-f3800
+Capacity 3840 Wh, continuous 6000 W, motor surge 9000 W, resistive boost none, LiFePO4, weight 132.3 lb.
+Source: https://www.ankersolix.com/products/f3800
+Tech specs: 3,840 Wh, LFP with 3,000+ cycles, 6,000 W continuous at 120 V and 240 V, 9,000 W AC surge, net weight 132.3 lb including the wheel dimension noted on the page.
+
+## Goal Zero Yeti 500X
+
+Page: https://willitrunpower.com/station/goal-zero-yeti-500x
+Capacity 497 Wh, continuous 300 W, motor surge 1200 W, resistive boost none, NMC, weight 12.9 lb.
+Source: https://goalzero.com/products/goal-zero-yeti-500x-portable-power-station
+Spec list: 497 Wh, Li-ion NMC, 500 cycles to 80% at 0.2C, 12.9 lb, 2× 120 V AC at 300 W and 1,200 W surge. A shelf price on the page was not recorded as a launch price.
+
+## Goal Zero Yeti 1000X
+
+Page: https://willitrunpower.com/station/goal-zero-yeti-1000x
+Capacity 997 Wh, continuous 1500 W, motor surge not applied, resistive boost none, NMC, weight 31.68 lb.
+Source: https://goalzero.com/products/goal-zero-yeti-1000x-portable-power-station
+Battery block: 997 Wh, NMC, 500 cycles to 80% at 1C, 31.68 lb. The ports section says 1,500 W and 3,500 W surge; a diagram label on the same page says 1,500 W and 3,000 W surge. The surge is omitted because the page disagrees with itself. Continuous 1,500 W is consistent.
+
+## Goal Zero Yeti 1500X
+
+Page: https://willitrunpower.com/station/goal-zero-yeti-1500x
+Capacity 1516 Wh, continuous 2000 W, motor surge 3500 W, resistive boost none, NMC, weight not published.
+Source: https://goalzero.com/products/goal-zero-yeti-1500x-portable-power-station
+Spec list: 1,516 Wh (10.8 V, 140.4 Ah), NMC, 500 cycles to 80% at 1C, 2 AC outlets at 2,000 W and 3,500 W surge. Weight was not in the spec block that was retrieved, so it is omitted. A shelf price was not recorded as a launch price.
+
+# Appliances
+
+## Danby DCR032C1WDB 3.2 cu ft compact refrigerator
+
+Page: https://willitrunpower.com/appliance/danby-dcr032c1wdb
+Category Refrigeration. Running 66.4 W. Peak not published W. Average 24.9 W. Duty cycle 0.375.
+Source: https://www.danby.com/products/compact-refrigerators/dcr032c1wdb/
+Danby lists 115 V, 66.4 W, and 218 kWh/year. Average draw is 218 × 1,000 ÷ 8,760 = 24.9 W. Duty cycle 0.375 is that average divided by 66.4 W, so it is an annual-average compressor fraction, not a hot-day measurement. Startup watts are not published.
+
+## Danby DAR032B1SLM 3.2 cu ft compact refrigerator
+
+Page: https://willitrunpower.com/appliance/danby-dar032b1slm
+Category Refrigeration. Running 150 W. Peak not published W. Average 29.6 W. Duty cycle 0.197.
+Source: https://www.danby.com/products/compact-refrigerators/dar032b1slm/
+Danby lists 115 V, 150 W, and 259 kWh/year. Average draw is 29.6 W. Duty cycle 0.197 is the annual average implied by those two figures. Startup watts are not published.
+
+## Danby DAR026A1BDD 2.6 cu ft compact refrigerator
+
+Page: https://willitrunpower.com/appliance/danby-dar026a1bdd
+Category Refrigeration. Running 90 W. Peak not published W. Average 28.9 W. Duty cycle 0.321.
+Source: https://www.danby.com/products/compact-refrigerators/dar026a1bdd/
+Danby lists 115 V, 90 W, and 253 kWh/year. Average draw is 28.9 W. Duty cycle 0.321 is the annual average implied by those two figures. Startup watts are not published.
+
+## Danby DAR010A1BDB 1.0 cu ft compact refrigerator
+
+Page: https://willitrunpower.com/appliance/danby-dar010a1bdb
+Category Refrigeration. Running 90 W. Peak not published W. Average 27.5 W. Duty cycle 0.306.
+Source: https://www.danby.com/products/compact-refrigerators/dar010a1bdb/
+Danby lists 115 V, 90 W, and 241 kWh/year. Average draw is 27.5 W. Duty cycle 0.306 is the annual average implied by those two figures. Startup watts are not published.
+
+## Samsung RT18DG6300 17.5 cu ft top-freezer refrigerator
+
+Page: https://willitrunpower.com/appliance/samsung-rt18dg6300
+Category Refrigeration. Running not published W. Peak not published W. Average 38 W. Duty cycle none.
+Source: https://data.energystar.gov/d/p5st-her9
+ENERGY STAR lists 333 kWh/year for RT18DG6300**, a 17.5 cu ft top freezer with no ice maker. Average draw is 333 × 1,000 ÷ 8,760 = 38.0 W. Compressor running watts and startup watts are not in the listing, so Willrun will not issue a runs or won't-run verdict.
+
+## Whirlpool WZC3209LW 9 cu ft chest freezer
+
+Page: https://willitrunpower.com/appliance/whirlpool-wzc3209lw
+Category Refrigeration. Running not published W. Peak not published W. Average 22.9 W. Duty cycle none.
+Source: https://data.energystar.gov/d/8t9c-g3tn
+ENERGY STAR lists 201 kWh/year for this 9.0 cu ft manual-defrost chest freezer. Average draw is 22.9 W. Running and startup watts are not in the listing, so there is no run verdict.
+
+## Danby DCF100A5WDB 10 cu ft chest freezer
+
+Page: https://willitrunpower.com/appliance/danby-dcf100a5wdb
+Category Refrigeration. Running not published W. Peak not published W. Average 24.1 W. Duty cycle none.
+Source: https://data.energystar.gov/d/8t9c-g3tn
+ENERGY STAR lists 211 kWh/year for this 10.0 cu ft manual-defrost chest freezer. Average draw is 24.1 W. Running and startup watts are not in the listing, so there is no run verdict.
+
+## Frigidaire FFFH20F3W 20 cu ft upright freezer
+
+Page: https://willitrunpower.com/appliance/frigidaire-fffh20f3w
+Category Refrigeration. Running not published W. Peak not published W. Average 54.6 W. Duty cycle none.
+Source: https://data.energystar.gov/d/8t9c-g3tn
+ENERGY STAR lists 478 kWh/year for FFFH20F3W*, a 20.0 cu ft upright freezer. Average draw is 54.6 W. Running and startup watts are not in the listing, so there is no run verdict.
+
+## BLACK+DECKER BDM05C 5,000 Btu/h window air conditioner
+
+Page: https://willitrunpower.com/appliance/black-decker-bdm05c
+Category Cooling. Running 347.2 W. Peak not published W. Average 347.2 W. Duty cycle none.
+Source: https://data.energystar.gov/d/5xn2-dv4h
+ENERGY STAR lists 5,000 Btu/h, CEER 14.4, 115 V, variable-speed compressor, and 260.4 kWh/year. Rated input is 5,000 ÷ 14.4 = 347.2 W. That matches the listed annual energy at the DOE room-AC assumption of 750 hours (347.2 × 750 ÷ 1,000 = 260.4). The 347.2 W figure is the draw while cooling at the rated condition, not a whole-year average. Startup watts are not published.
+
+## BLACK+DECKER BD08NWES 8,000 Btu/h window air conditioner
+
+Page: https://willitrunpower.com/appliance/black-decker-bd08nwes
+Category Cooling. Running 533.3 W. Peak not published W. Average 533.3 W. Duty cycle none.
+Source: https://data.energystar.gov/d/5xn2-dv4h
+ENERGY STAR lists 8,000 Btu/h, CEER 15, 115 V, variable-speed compressor, and 400 kWh/year. Rated input is 8,000 ÷ 15 = 533.3 W, which matches 400 kWh at 750 hours. Startup watts are not published.
+
+## BLACK+DECKER BD12NWES 12,000 Btu/h window air conditioner
+
+Page: https://willitrunpower.com/appliance/black-decker-bd12nwes
+Category Cooling. Running 800 W. Peak not published W. Average 800 W. Duty cycle none.
+Source: https://data.energystar.gov/d/5xn2-dv4h
+ENERGY STAR lists 12,000 Btu/h, CEER 15, 115 V, variable-speed compressor, and 600 kWh/year. Rated input is 12,000 ÷ 15 = 800 W, which matches 600 kWh at 750 hours. Startup watts are not published.
+
+## GE PWJV10 10,000 Btu/h window air conditioner
+
+Page: https://willitrunpower.com/appliance/ge-pwjv10
+Category Cooling. Running 625 W. Peak not published W. Average 625 W. Duty cycle none.
+Source: https://data.energystar.gov/d/5xn2-dv4h
+ENERGY STAR lists model PWJV10W**# at 10,000 Btu/h, CEER 16, and 468.8 kWh/year, with a variable-speed compressor. Rated input is 10,000 ÷ 16 = 625 W. 625 × 750 ÷ 1,000 = 468.75, which rounds to the listed 468.8 kWh. Startup watts are not published.
+
+## Zoeller Model 53 3/10 HP sump pump, 115 V
+
+Page: https://willitrunpower.com/appliance/zoeller-m53
+Category Pumps. Running 1115.5 W. Peak not published W. Average not stored W. Duty cycle none.
+Source: https://zoellerpumps.com/product/model-m53-sump-pump/
+Zoeller lists the Model 53 at 3/10 HP, 115 V or 230 V, and 4.8–9.7 A. The 115 V automatic model in Zoeller's 50-series technical table is 9.7 A. Running watts used here are 9.7 × 115 = 1,115.5 W. Startup amps are not published. How often the float runs is site-specific, so no duty cycle is stored.
+
+## ResMed AirSense 11, typical power from the user guide
+
+Page: https://willitrunpower.com/appliance/resmed-airsense-11
+Category Medical. Running 56.1 W. Peak 73.2 W. Average 56.1 W. Duty cycle 1.
+Source: https://document.resmed.com/documents/products/machine/airsense-11/user-guide/airsense11_user-guide_amer_mul.pdf
+Americas user guide, 65 W power supply section: typical power consumption 56.1 W (111.5 VA) and peak power consumption 73.2 W (137.6 VA). This is the published system figure, not the lower no-humidifier row on ResMed's separate therapy-power sheet.
+
+## ResMed AirSense 11 AutoSet, no humidifier
+
+Page: https://willitrunpower.com/appliance/resmed-airsense-11-no-humidifier
+Category Medical. Running 7 W. Peak not published W. Average 7 W. Duty cycle 1.
+Source: https://www.resmed-healthcare.de/wp-content/uploads/2025/10/1018528r11_Uebers_Stromverbrauch-Geraete_RDE_PDF-1.pdf
+ResMed's therapy-device power table lists AirSense 11 AutoSet operation at 7 Wh and standby at 2 Wh. The operation figure is energy per hour, so the average draw is 7 W. ResMed notes the values were measured in a lab and that a local meter can differ.
+
+## ResMed AirSense 11 with HumidAir 11 and ClimateLineAir 11
+
+Page: https://willitrunpower.com/appliance/resmed-airsense-11-heated-tube
+Category Medical. Running 55 W. Peak not published W. Average 55 W. Duty cycle 1.
+Source: https://www.resmed-healthcare.de/wp-content/uploads/2025/10/1018528r11_Uebers_Stromverbrauch-Geraete_RDE_PDF-1.pdf
+The same ResMed table lists AirSense 11 AutoSet with HumidAir 11 and heated ClimateLineAir 11 at 55 Wh during operation. Average draw is 55 W.
+
+## ResMed AirMini travel CPAP
+
+Page: https://willitrunpower.com/appliance/resmed-airmini
+Category Medical. Running 6.3 W. Peak not published W. Average 6.3 W. Duty cycle 1.
+Source: https://www.resmed-healthcare.de/wp-content/uploads/2025/10/1018528r11_Uebers_Stromverbrauch-Geraete_RDE_PDF-1.pdf
+ResMed's table lists AirMini operation at 6.3 Wh and standby at 1 Wh. Average draw during operation is 6.3 W.
+
+## LG 55QNED85 55-inch TV
+
+Page: https://willitrunpower.com/appliance/lg-55qned85
+Category Electronics. Running 76.9 W. Peak not published W. Average 76.9 W. Duty cycle 1.
+Source: https://data.energystar.gov/d/pd96-rr3d
+ENERGY STAR on-mode power for 55QNED85TU* is 76.9 W at a 54.6-inch viewable diagonal. Standby with the network disconnected is 0.30 W. On-mode power is what the station has to supply while the TV is on.
+
+## Sansui LE-32T1 32-inch TV
+
+Page: https://willitrunpower.com/appliance/sansui-le-32t1
+Category Electronics. Running 28.4 W. Peak not published W. Average 28.4 W. Duty cycle 1.
+Source: https://data.energystar.gov/d/pd96-rr3d
+ENERGY STAR on-mode power for Sansui LE-32T1 is 28.4 W at a 31.5-inch viewable diagonal.
+
+## Sansui LE-55V4 55-inch TV
+
+Page: https://willitrunpower.com/appliance/sansui-le-55v4
+Category Electronics. Running 72.5 W. Peak not published W. Average 72.5 W. Duty cycle 1.
+Source: https://data.energystar.gov/d/pd96-rr3d
+ENERGY STAR on-mode power for Sansui LE-55V4 is 72.52 W at 55 inches. Standby with the network disconnected is 0.31 W. Stored running watts are rounded to 72.5.
+
+## Samsung QN65QN90D 65-inch TV
+
+Page: https://willitrunpower.com/appliance/samsung-qn65qn90d
+Category Electronics. Running 122 W. Peak not published W. Average 122 W. Duty cycle 1.
+Source: https://data.energystar.gov/d/pd96-rr3d
+ENERGY STAR on-mode power for QN65QN90DAF is 121.96 W at a 64.5-inch viewable diagonal. Standby with the network disconnected is 0.30 W. Stored running watts are rounded to 122.
+
+## LG 27BA450 27-inch monitor
+
+Page: https://willitrunpower.com/appliance/lg-27ba450
+Category Electronics. Running 11.8 W. Peak not published W. Average 11.8 W. Duty cycle 1.
+Source: https://data.energystar.gov/d/qbg3-d468
+ENERGY STAR certified displays lists LG 27BA450 at 11.80 W on-mode and 0.14 W sleep, 27-inch screen.
+
+## Amana AMND501BW dehumidifier, about 50 pints/day
+
+Page: https://willitrunpower.com/appliance/amana-amnd501bw
+Category Cooling. Running 485 W. Peak not published W. Average 485 W. Duty cycle none.
+Source: https://data.energystar.gov/d/mgiu-hu4z
+ENERGY STAR lists 49.43 pints/day, integrated energy factor 2.01 L/kWh, and 520 kWh/year. Operating draw at the rated test condition is (49.43 × 0.473176 L/pint ÷ 24 h) ÷ 2.01 L/kWh × 1,000 = 485 W. That is the draw while it is removing water at the rated rate, not a whole-year average. Startup watts are not published.
+
+## Frigidaire FHDD2233Y1 dehumidifier, about 22 pints/day
+
+Page: https://willitrunpower.com/appliance/frigidaire-fhdd2233y1
+Category Cooling. Running 258 W. Peak not published W. Average 258 W. Duty cycle none.
+Source: https://data.energystar.gov/d/mgiu-hu4z
+ENERGY STAR lists 22.27 pints/day, integrated energy factor 1.70 L/kWh, and 276 kWh/year. Operating draw at the rated test condition is (22.27 × 0.473176 ÷ 24) ÷ 1.70 × 1,000 = 258 W. Startup watts are not published.
+
+## Hunter 52774 44-inch ceiling fan, high speed
+
+Page: https://willitrunpower.com/appliance/hunter-52774
+Category Fans. Running 12.5 W. Peak not published W. Average 12.5 W. Duty cycle 1.
+Source: https://data.energystar.gov/d/2te3-nmxp
+ENERGY STAR lists high speed at 12.5 W, low speed at 1.6 W, and standby at 0.3 W for this 44-inch fan. The run check uses high speed. Startup watts are not published.
+
+## Hunter 52881 44-inch ceiling fan, high speed
+
+Page: https://willitrunpower.com/appliance/hunter-52881
+Category Fans. Running 17.6 W. Peak not published W. Average 17.6 W. Duty cycle 1.
+Source: https://data.energystar.gov/d/2te3-nmxp
+ENERGY STAR lists high speed at 17.6 W, low speed at 2.7 W, and standby at 0.5 W for this 44-inch fan. Startup watts are not published.
+
+## Broan 688ESL bathroom fan
+
+Page: https://willitrunpower.com/appliance/broan-688esl
+Category Fans. Running 16.7 W. Peak not published W. Average 16.7 W. Duty cycle 1.
+Source: https://data.energystar.gov/d/8dv7-nngq
+ENERGY STAR lists 50 CFM and 3 CFM/W for this bathroom/utility fan. Draw is 50 ÷ 3 = 16.7 W. Startup watts are not published.
+
+## Broan 744 bathroom fan
+
+Page: https://willitrunpower.com/appliance/broan-744
+Category Fans. Running 17.5 W. Peak not published W. Average 17.5 W. Duty cycle 1.
+Source: https://data.energystar.gov/d/8dv7-nngq
+ENERGY STAR lists 70 CFM and 4 CFM/W. Draw is 70 ÷ 4 = 17.5 W. Startup watts are not published.
+
+## Simply Conserve L9W-A19 LED bulb
+
+Page: https://willitrunpower.com/appliance/simply-conserve-a19
+Category Lighting. Running 9 W. Peak 9 W. Average 9 W. Duty cycle 1.
+Source: https://data.energystar.gov/d/msj5-kqfv
+ENERGY STAR connected-bulb listing: 9 W, 800 lumens, 60 W equivalency, model L9W-A19-CCT-RGB-WiFi G2.
+
+## Luminus PLYS120TW LED bulb
+
+Page: https://willitrunpower.com/appliance/luminus-plys120tw
+Category Lighting. Running 9 W. Peak 9 W. Average 9 W. Duty cycle 1.
+Source: https://data.energystar.gov/d/msj5-kqfv
+ENERGY STAR connected-bulb listing: 9 W, 800 lumens, 60 W equivalency.
+
+## 13-inch MacBook Air, included adapter maximum
+
+Page: https://willitrunpower.com/appliance/apple-macbook-air-13-adapter
+Category Electronics. Running 60 W. Peak not published W. Average 60 W. Duty cycle 1.
+Source: https://www.apple.com/macbook-air/specs/
+Apple's MacBook Air specs page lists a 40W Dynamic Power Adapter with 60W max for the 13-inch model, and a 53.8 Wh battery. 60 W is the adapter ceiling, not a measured average workload, so the runtime is a short estimate. Some configurations on the same page ship a 35 W dual USB-C adapter instead.
+
+## Lenovo IdeaPad Vibe 15AKP12, ENERGY STAR short idle
+
+Page: https://willitrunpower.com/appliance/lenovo-ideapad-vibe-15-idle
+Category Electronics. Running 6.1 W. Peak not published W. Average 6.1 W. Duty cycle 1.
+Source: https://data.energystar.gov/d/rxdj-2c88
+ENERGY STAR computers v9 lists short idle at 6.1 W and sleep at 0.6 W. Short idle is not a video-call or compile load. A heavier workload was not published, so this runtime only covers idle.
+
+## Lenovo IdeaPad Vibe 14AKP12, ENERGY STAR short idle
+
+Page: https://willitrunpower.com/appliance/lenovo-ideapad-vibe-14-idle
+Category Electronics. Running 3.8 W. Peak not published W. Average 3.8 W. Duty cycle 1.
+Source: https://data.energystar.gov/d/rxdj-2c88
+ENERGY STAR computers v9 lists short idle at 3.8 W and sleep at 0.4 W. This is idle only.
+
+## Apple Mac Studio (M5 Ultra), ENERGY STAR short idle
+
+Page: https://willitrunpower.com/appliance/apple-mac-studio-m5-ultra-idle
+Category Electronics. Running 7 W. Peak not published W. Average 7 W. Duty cycle 1.
+Source: https://data.energystar.gov/d/rxdj-2c88
+ENERGY STAR computers v9 lists model A3546 short idle at 7.0 W, long idle at 5.9 W, and sleep at 0.9 W. Full compute load was not published.
+
+## Lasko 755320 ceramic heater, high
+
+Page: https://willitrunpower.com/appliance/lasko-755320-high
+Category Heat. Running 1500 W. Peak 1500 W. Average 1500 W. Duty cycle 1.
+Source: https://lasko.com/products/lasko-1500w-digital-ceramic-space-heater-with-remote-755320-silver
+Lasko lists 120 V, current 7.5 A to 12.5 A, and energy output 900 W to 1,500 W. High is 1,500 W. A resistive element does not have a separate motor surge, so surge is set equal to the high setting. The thermostat cycles in real rooms; this entry assumes the high element is on.
+
+## Lasko 755320 ceramic heater, low
+
+Page: https://willitrunpower.com/appliance/lasko-755320-low
+Category Heat. Running 900 W. Peak 900 W. Average 900 W. Duty cycle 1.
+Source: https://lasko.com/products/lasko-1500w-digital-ceramic-space-heater-with-remote-755320-silver
+Same Lasko listing: energy output 900 W to 1,500 W. Low is the 900 W end of that range. 7.5 A × 120 V = 900 W.
+
+## Panasonic NN-SU656WAWH microwave, electrical input
+
+Page: https://willitrunpower.com/appliance/panasonic-nn-su656
+Category Kitchen. Running 1500 W. Peak not published W. Average 1500 W. Duty cycle 1.
+Source: https://help.na.panasonic.com/answers/features-and-specifications-microwave-oven-nn-su656wawh/
+Panasonic lists power supply 120 V / 60 Hz, microwave output 1,100 W, and microwave power consumption 1,500 W. The station has to supply the 1,500 W input, not the 1,100 W cooking output. A separate startup surge is not published. X-Boost and Power Lifting are not applied, because those modes are described for simple heating loads and a microwave is an electronic supply.
+
+## TP-Link Archer AX73 router, networked standby
+
+Page: https://willitrunpower.com/appliance/tp-link-archer-ax73
+Category Electronics. Running 8.7 W. Peak not published W. Average 8.7 W. Duty cycle 1.
+Source: https://www.tp-link.com/us/home-networking/wifi-router/archer-ax73/
+TP-Link lists typical power consumption in networked standby, with all wired ports connected and all wireless radios activated, at 8.7 W. The power adapter is 12 V, 2.5 A, which is a supply rating and is not used as the draw.
+
+## LG LCE3010 induction cooktop, 1,200 W zone
+
+Page: https://willitrunpower.com/appliance/lg-lce3010-zone-1200
+Category Kitchen. Running 1200 W. Peak not published W. Average 1200 W. Duty cycle 1.
+Source: https://data.energystar.gov/d/m6gi-ng33
+ENERGY STAR residential electric cooking lists zone 1 at 1,200 W and zone 2 at 1,900 W for LCE3010SBE. This entry is zone 1 alone. Induction supplies are not marked eligible for X-Boost or Power Lifting, which makers describe for simple heaters.
+
+## LG LCE3010 induction cooktop, 1,900 W zone
+
+Page: https://willitrunpower.com/appliance/lg-lce3010-zone-1900
+Category Kitchen. Running 1900 W. Peak not published W. Average 1900 W. Duty cycle 1.
+Source: https://data.energystar.gov/d/m6gi-ng33
+ENERGY STAR lists zone 2 of LCE3010SBE at 1,900 W. This entry is that zone alone, not two zones together.
+
+# Answer pages
+
+- Can the EcoFlow DELTA 2 run ResMed AirSense 11, typical power from the user guide? https://willitrunpower.com/can-ecoflow-delta-2-run-resmed-airsense-11
+- Can the EcoFlow RIVER 2 run ResMed AirSense 11, typical power from the user guide? https://willitrunpower.com/can-ecoflow-river-2-run-resmed-airsense-11
+- Can the Anker SOLIX C300 run ResMed AirSense 11, typical power from the user guide? https://willitrunpower.com/can-anker-solix-c300-run-resmed-airsense-11
+- Can the Goal Zero Yeti 500X run ResMed AirSense 11, typical power from the user guide? https://willitrunpower.com/can-goal-zero-yeti-500x-run-resmed-airsense-11
+- Can the Jackery Explorer 1000 v2 run ResMed AirSense 11, typical power from the user guide? https://willitrunpower.com/can-jackery-explorer-1000-v2-run-resmed-airsense-11
+- Can the Anker SOLIX C1000 run ResMed AirSense 11, typical power from the user guide? https://willitrunpower.com/can-anker-solix-c1000-run-resmed-airsense-11
+- Can the EcoFlow RIVER 2 run Zoeller Model 53 3/10 HP sump pump, 115 V? https://willitrunpower.com/can-ecoflow-river-2-run-zoeller-m53
+- Can the BLUETTI AC70 run Zoeller Model 53 3/10 HP sump pump, 115 V? https://willitrunpower.com/can-bluetti-ac70-run-zoeller-m53
+- Can the EcoFlow DELTA 2 run Zoeller Model 53 3/10 HP sump pump, 115 V? https://willitrunpower.com/can-ecoflow-delta-2-run-zoeller-m53
+- Can the Jackery Explorer 1000 v2 run Zoeller Model 53 3/10 HP sump pump, 115 V? https://willitrunpower.com/can-jackery-explorer-1000-v2-run-zoeller-m53
+- Can the Anker SOLIX F3800 run Zoeller Model 53 3/10 HP sump pump, 115 V? https://willitrunpower.com/can-anker-solix-f3800-run-zoeller-m53
+- Can the BLUETTI AC200L run Zoeller Model 53 3/10 HP sump pump, 115 V? https://willitrunpower.com/can-bluetti-ac200l-run-zoeller-m53
+- Can the Goal Zero Yeti 1000X run Zoeller Model 53 3/10 HP sump pump, 115 V? https://willitrunpower.com/can-goal-zero-yeti-1000x-run-zoeller-m53
+- Can the EcoFlow DELTA 2 run BLACK+DECKER BD08NWES 8,000 Btu/h window air conditioner? https://willitrunpower.com/can-ecoflow-delta-2-run-black-decker-bd08nwes
+- Can the Anker SOLIX C1000 run BLACK+DECKER BD12NWES 12,000 Btu/h window air conditioner? https://willitrunpower.com/can-anker-solix-c1000-run-black-decker-bd12nwes
+- Can the EcoFlow RIVER 2 run BLACK+DECKER BDM05C 5,000 Btu/h window air conditioner? https://willitrunpower.com/can-ecoflow-river-2-run-black-decker-bdm05c
+- Can the EcoFlow RIVER 3 Plus run BLACK+DECKER BDM05C 5,000 Btu/h window air conditioner? https://willitrunpower.com/can-ecoflow-river-3-plus-run-black-decker-bdm05c
+- Can the EcoFlow DELTA Pro 3 run GE PWJV10 10,000 Btu/h window air conditioner? https://willitrunpower.com/can-ecoflow-delta-pro-3-run-ge-pwjv10
+- Can the Jackery Explorer 2000 Plus run GE PWJV10 10,000 Btu/h window air conditioner? https://willitrunpower.com/can-jackery-explorer-2000-plus-run-ge-pwjv10
+- Can the BLUETTI AC180 run BLACK+DECKER BD12NWES 12,000 Btu/h window air conditioner? https://willitrunpower.com/can-bluetti-ac180-run-black-decker-bd12nwes
+- Can the EcoFlow RIVER 2 run Lasko 755320 ceramic heater, high? https://willitrunpower.com/can-ecoflow-river-2-run-lasko-755320-high
+- Can the EcoFlow DELTA 2 run Lasko 755320 ceramic heater, high? https://willitrunpower.com/can-ecoflow-delta-2-run-lasko-755320-high
+- Can the BLUETTI AC70 run Lasko 755320 ceramic heater, high? https://willitrunpower.com/can-bluetti-ac70-run-lasko-755320-high
+- Can the BLUETTI AC70 run Lasko 755320 ceramic heater, low? https://willitrunpower.com/can-bluetti-ac70-run-lasko-755320-low
+- Can the Goal Zero Yeti 500X run Lasko 755320 ceramic heater, high? https://willitrunpower.com/can-goal-zero-yeti-500x-run-lasko-755320-high
+- Can the Goal Zero Yeti 1500X run Lasko 755320 ceramic heater, high? https://willitrunpower.com/can-goal-zero-yeti-1500x-run-lasko-755320-high
+- Can the EcoFlow RIVER 2 run Lasko 755320 ceramic heater, low? https://willitrunpower.com/can-ecoflow-river-2-run-lasko-755320-low
+- Can the EcoFlow RIVER 3 Plus run Lasko 755320 ceramic heater, low? https://willitrunpower.com/can-ecoflow-river-3-plus-run-lasko-755320-low
+- Can the EcoFlow DELTA 2 run Panasonic NN-SU656WAWH microwave, electrical input? https://willitrunpower.com/can-ecoflow-delta-2-run-panasonic-nn-su656
+- Can the EcoFlow RIVER 2 Pro run Panasonic NN-SU656WAWH microwave, electrical input? https://willitrunpower.com/can-ecoflow-river-2-pro-run-panasonic-nn-su656
+- Can the Anker SOLIX F2000 (PowerHouse 767) run Panasonic NN-SU656WAWH microwave, electrical input? https://willitrunpower.com/can-anker-solix-f2000-run-panasonic-nn-su656
+- Can the BLUETTI AC180 run Panasonic NN-SU656WAWH microwave, electrical input? https://willitrunpower.com/can-bluetti-ac180-run-panasonic-nn-su656
+- Can the EcoFlow DELTA 2 run Danby DCR032C1WDB 3.2 cu ft compact refrigerator? https://willitrunpower.com/can-ecoflow-delta-2-run-danby-dcr032c1wdb
+- Can the EcoFlow RIVER 2 run Danby DCR032C1WDB 3.2 cu ft compact refrigerator? https://willitrunpower.com/can-ecoflow-river-2-run-danby-dcr032c1wdb
+- Can the Anker SOLIX C300 run Danby DAR032B1SLM 3.2 cu ft compact refrigerator? https://willitrunpower.com/can-anker-solix-c300-run-danby-dar032b1slm
+- Can the Jackery Explorer 1000 Plus run Danby DCR032C1WDB 3.2 cu ft compact refrigerator? https://willitrunpower.com/can-jackery-explorer-1000-plus-run-danby-dcr032c1wdb
+- Can the EcoFlow RIVER 2 run LG 55QNED85 55-inch TV? https://willitrunpower.com/can-ecoflow-river-2-run-lg-55qned85
+- Can the EcoFlow DELTA 2 run TP-Link Archer AX73 router, networked standby? https://willitrunpower.com/can-ecoflow-delta-2-run-tp-link-archer-ax73
+- Can the EcoFlow DELTA 2 run LG LCE3010 induction cooktop, 1,900 W zone? https://willitrunpower.com/can-ecoflow-delta-2-run-lg-lce3010-zone-1900
+- Can the EcoFlow DELTA 2 Max run LG LCE3010 induction cooktop, 1,900 W zone? https://willitrunpower.com/can-ecoflow-delta-2-max-run-lg-lce3010-zone-1900
+- Can the Anker SOLIX F3800 run LG LCE3010 induction cooktop, 1,900 W zone? https://willitrunpower.com/can-anker-solix-f3800-run-lg-lce3010-zone-1900
+
+## Generators
+- [All generators](https://willitrunpower.com/generators): 20 portable gas, dual-fuel and inverter models with running and starting watts.
+- [Whole house via a 30 amp inlet](https://willitrunpower.com/whole-house-30-amp-inlet): a 30 A 120/240 V inlet carries up to 7,200 W.
+- [Generator vs power station](https://willitrunpower.com/guides/generator-vs-power-station)
+- [What size generator for a 30 amp inlet](https://willitrunpower.com/guides/generator-size-for-30-amp-inlet)
+- [Best generator for home backup](https://willitrunpower.com/guides/best-generator-for-home-backup)
+- [Quietest inverter generators](https://willitrunpower.com/guides/quietest-inverter-generators)
+
+### Generator specs
+- Honda EU2200i: 1800 W running, 2200 W starting, Gasoline, inverter, 30 A outlet: none, runtime 3.2 hr at rated load, 8.1 hr at 1/4 load. Source: https://powerequipment.honda.com/generators/models/eu2200i
+- Honda EU3000iS: 2800 W running, 3000 W starting, Gasoline, inverter, 30 A outlet: L5-30R, runtime 6.9 hr at rated load, 19.6 hr at 1/4 load. Source: https://powerequipment.honda.com/generators/models/eu3000is
+- Honda EU7000iS: 5500 W running, 7000 W starting, Gasoline, inverter, 30 A outlet: L14-30R, runtime 6.4 hr at rated load, 16 hr at 1/4 load. Source: https://powerequipment.honda.com/generators/models/eu7000is
+- Champion 4500W Dual Fuel Inverter (200988): 3500 W running, 4500 W starting, Dual fuel (gasoline/propane), inverter, 30 A outlet: TT-30R, runtime 14 hr at 1/4 load on gasoline, 21 hr on a 20-lb propane tank. Source: https://www.championpowerequipment.com/product/200988-4500w-electric-start-dual-fuel-inverter/
+- Champion 2500W Ultralight Inverter (200951): 1850 W running, 2500 W starting, Gasoline, inverter, 30 A outlet: none, runtime 11.5 hr at 1/4 load. Source: https://www.championpowerequipment.com/wp-content/uploads/2020/11/200951-om-english.pdf
+- Champion 7500W Dual Fuel (100891): 7500 W running, 9375 W starting, Dual fuel (gasoline/propane), open-frame, 30 A outlet: L14-30R, runtime 10 hr at 1/2 load on gasoline, 5.5 hr at 1/2 load on a 20-lb propane tank. Source: https://www.championpowerequipment.com/wp-content/uploads/2020/10/100891-om-english.pdf
+- Westinghouse iGen4500DFc: 3700 W running, 4500 W starting, Dual fuel (gasoline/propane), inverter, 30 A outlet: TT-30R, runtime 18 hr at 25% load on gasoline, 22 hr at 25% on propane. Source: https://cdn.westinghouseoutdoorpower.com/owners_manuals/Westinghouse_iGen4500DFc_manual_web.pdf
+- Westinghouse iGen2200: 1800 W running, 2200 W starting, Gasoline, inverter, 30 A outlet: none, runtime Up to 12 hr at 25% load. Source: https://westinghouse.com/products/igen2200-inverter-generator
+- Westinghouse WGen9500DF: 9500 W running, 12500 W starting, Dual fuel (gasoline/propane), open-frame, 30 A outlet: L14-30R, runtime 12 hr at 25% load on gasoline, 7 hr at 50% on propane. Source: https://westinghouse.com/products/wgen9500df-generator-dual-fuel
+- Generac GP8000E COsense: 8000 W running, 10000 W starting, Gasoline, open-frame, 30 A outlet: L14-30R, runtime 15 hr at 25% load, 10 hr at 50% load. Source: https://www.generac.com/globalassets/products/residential/portable-generators/spec-sheets/7675-gp8000e-cosense-portable-generator-spec-sheet.pdf
+- Generac iQ3500 COsense: 3000 W running, 3500 W starting, Gasoline, inverter, 30 A outlet: L5-30R, runtime 14.1 hr at 25% load, 8.9 hr at 50% load. Source: https://www.generac.com/globalassets/products/residential/portable-generators/spec-sheets/7723-iq3500-cosense-portable-generator-spec-sheet.pdf
+- Generac GP3500iO: 3000 W running, 3500 W starting, Gasoline, inverter, 30 A outlet: L5-30R, runtime 11 hr at 25% load, 8 hr at 50% load. Source: https://www.generac.com/globalassets/products/residential/portable-generators/spec-sheets/7128-gp3500io-portable-generator-spec-sheet.pdf
+- DuroMax XP13000EH: 10500 W running, 13000 W starting, Dual fuel (gasoline/propane), open-frame, 30 A outlet: 120/240V 30A twist-lock, runtime 8.5 hr at 50% load on gasoline, 6.5 hr at 50% on propane. Source: https://www.duromaxpower.com/products/duromax-xp13000eh-13000-watt-portable-hybrid-gas-propane-generator
+- DuroMax XP12000EH: 9500 W running, 12000 W starting, Dual fuel (gasoline/propane), open-frame, 30 A outlet: 120/240V 30A twist-lock, runtime 19 hr at 25% / 8 hr at 50% on gasoline; 14 hr / 7 hr on a 40-lb propane tank. Source: https://www.duromaxpower.com/products/duromax-xp12000eh-dual-fuel-portable-gas-propane-generator
+- Predator 3500 Super Quiet Inverter: 3000 W running, 3500 W starting, Gasoline, inverter, 30 A outlet: none, runtime 11 hr at 25% load. Source: https://www.harborfreight.com/3500-watt-super-quiet-inverter-generator-with-co-secure-technology-49-state-compliant-71358.html
+- Predator 9500 Super Quiet Inverter: 7600 W running, 9500 W starting, Gasoline, inverter, 30 A outlet: L14-30R, runtime 18.5 hr at 25% load. Source: https://www.harborfreight.com/electrical/generators/inverter/9500-watt-super-quiet-inverter-generator-with-co-secure-technology-57080.html
+- WEN 56380i: 3400 W running, 3800 W starting, Gasoline, inverter, 30 A outlet: TT-30R, runtime 8.5 hr at 50% load. Source: https://wenproducts.com/products/wen-56380i-super-quiet-3800-watt-portable-inverter-generator-with-fuel-shut-off
+- WEN DF1100T: 8300 W running, 11000 W starting, Dual fuel (gasoline/propane), open-frame, 30 A outlet: L5-30R (120V only), runtime 8.5 hr at 50% load on gasoline, 3 hr on a 20-lb propane tank. Source: https://wenproducts.com/products/wen-df1100t-11-000-8300-watt-120v-240v-dual-fuel-gasoline-and-propane-powered-electric-start-portable-generator
+- Pulsar G12KBN: 9500 W running, 12000 W starting, Dual fuel (gasoline/propane), open-frame, 30 A outlet: 120/240V 30A twist-lock, runtime 13 hr at 50% load on gasoline. Source: https://www.pulsar-products.com/products/12-000-watt-dual-fuel-portable-generator-g12kbn
+- FIRMAN T07571 Tri Fuel: 7500 W running, 9400 W starting, Tri fuel (gasoline/propane/natural gas), open-frame, 30 A outlet: L14-30R, runtime Up to 12 hr at 25% load. Source: https://firmanpowerequipment.com/products/t07571

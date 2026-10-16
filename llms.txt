@@ -1,0 +1,53 @@
+# Willrun
+
+> Willrun answers whether a specific portable power station or generator can run a specific appliance, using published running and starting watts, an 85% inverter allowance for stations, and 30 amp inlet math for home backup.
+
+Willrun is a static site. Every station and appliance row cites a manufacturer or ENERGY STAR URL. Runtime is nameplate watt-hours times 0.85, divided by average draw. Verdicts are runs, runs with surge risk, won't run, or no run verdict when running watts were not published.
+
+## Start here
+- [Calculator](https://willitrunpower.com/): pick a station, add appliances, read the verdict.
+- [Methodology](https://willitrunpower.com/methodology): the 0.85 allowance, duty cycle, and how surge is treated.
+- [Stations](https://willitrunpower.com/stations): 24 models.
+- [Appliances](https://willitrunpower.com/appliances): 40 loads.
+- [Affiliate disclosure](https://willitrunpower.com/disclosure)
+
+## Guides
+- [Best power station for a fridge](https://willitrunpower.com/best-power-station-for/fridge): For the Danby 3.2 cu ft fridge with a published 66.4 W draw, every station in this set can cover the running watts, and the longest runtimes belong to the largest packs — but startup watts were not published, so every one of those answers is a surge risk.
+- [Best power station for a CPAP](https://willitrunpower.com/best-power-station-for/cpap): Every station in this set can run an AirSense 11 at the user guide's 56.1 W typical and 73.2 W peak, and the longest nights come from the largest packs, not the highest inverter rating.
+- [Best power station for camping](https://willitrunpower.com/best-power-station-for/camping): For a carried campsite, the EcoFlow RIVER 2 (7.7 lb, 256 Wh) and Anker SOLIX C300 (288 Wh) cover a CPAP and lights; a Danby compact fridge pushes you toward the RIVER 2 Pro, DELTA 2, or AC180 if you can spare the weight.
+- [Best power station for an RV](https://willitrunpower.com/best-power-station-for/rv): An 8,000 Btu/h BLACK+DECKER window unit draws about 533 W while cooling. Stations at or above 600 W continuous can hold that running load, and the DELTA Pro 3 and F3800 add 120/240 V outlets the smaller packs do not have. None of them publish a match for the compressor's startup watts.
+- [Best power station for home backup](https://willitrunpower.com/best-power-station-for/home-backup): On stored energy alone, the EcoFlow DELTA Pro 3 (4,096 Wh) outlasts the Anker SOLIX F3800 (3,840 Wh), while the F3800 has the higher continuous output at 6,000 W. A 1,500 W Lasko heater needs at least 1,500 W continuous or a documented resistive boost.
+- [Best power station for a sump pump](https://willitrunpower.com/best-power-station-for/sump-pump): The Zoeller Model 53 at 115 V draws 1,115.5 W while running. Stations under that — including the RIVER 2 series, the AC70, and the Yeti 500X — will not hold it. Stations above it still carry a surge risk because Zoeller does not publish starting amps.
+
+## Outages
+- [24-hour outage](https://willitrunpower.com/outage/24-hour): EcoFlow DELTA 2 Max, EcoFlow DELTA Pro 3, BLUETTI AC200L, Jackery Explorer 2000 Plus, Jackery Explorer 2000 v2, Anker SOLIX F2000 (PowerHouse 767), Anker SOLIX F3800 have enough nameplate watt-hours, after the 85% allowance, for this 24-hour mix (1,608 Wh of load).
+- [3-day outage](https://willitrunpower.com/outage/3-day): No base unit in this set stores enough for this mix. The load is 4,823 Wh, which needs about 5,675 Wh of nameplate capacity after the 85% allowance, and nothing here is that large without an extra battery.
+
+## Comparisons
+- [EcoFlow DELTA 2 vs BLUETTI AC180](https://willitrunpower.com/vs/ecoflow-delta-2-vs-bluetti-ac180)
+- [EcoFlow DELTA 2 vs Jackery Explorer 1000 v2](https://willitrunpower.com/vs/ecoflow-delta-2-vs-jackery-explorer-1000-v2)
+- [EcoFlow DELTA 2 vs Anker SOLIX C1000](https://willitrunpower.com/vs/ecoflow-delta-2-vs-anker-solix-c1000)
+- [EcoFlow DELTA 3 Plus vs EcoFlow DELTA 2](https://willitrunpower.com/vs/ecoflow-delta-3-plus-vs-ecoflow-delta-2)
+- [EcoFlow DELTA 2 Max vs Jackery Explorer 2000 Plus](https://willitrunpower.com/vs/ecoflow-delta-2-max-vs-jackery-explorer-2000-plus)
+- [EcoFlow DELTA 2 Max vs Anker SOLIX F2000 (PowerHouse 767)](https://willitrunpower.com/vs/ecoflow-delta-2-max-vs-anker-solix-f2000)
+- [Jackery Explorer 1000 Plus vs Anker SOLIX C1000](https://willitrunpower.com/vs/jackery-explorer-1000-plus-vs-anker-solix-c1000)
+- [EcoFlow RIVER 2 vs Anker SOLIX C300](https://willitrunpower.com/vs/ecoflow-river-2-vs-anker-solix-c300)
+- [EcoFlow RIVER 2 Pro vs BLUETTI AC70](https://willitrunpower.com/vs/ecoflow-river-2-pro-vs-bluetti-ac70)
+- [Goal Zero Yeti 1500X vs EcoFlow DELTA 2 Max](https://willitrunpower.com/vs/goal-zero-yeti-1500x-vs-ecoflow-delta-2-max)
+- [Anker SOLIX F3800 vs EcoFlow DELTA Pro 3](https://willitrunpower.com/vs/anker-solix-f3800-vs-ecoflow-delta-pro-3)
+- [Jackery Explorer 2000 v2 vs Jackery Explorer 2000 Plus](https://willitrunpower.com/vs/jackery-explorer-2000-v2-vs-jackery-explorer-2000-plus)
+
+## Data
+- [stations.json](https://willitrunpower.com/data/stations.json)
+- [appliances.json](https://willitrunpower.com/data/appliances.json)
+- [links.json](https://willitrunpower.com/data/links.json): affiliate hrefs. Null means the Check price button opens the manufacturer page.
+
+Full text for answer pages: https://willitrunpower.com/llms-full.txt
+
+## Generators
+- [All generators](https://willitrunpower.com/generators): 20 portable gas, dual-fuel and inverter models with running and starting watts.
+- [Whole house via a 30 amp inlet](https://willitrunpower.com/whole-house-30-amp-inlet): a 30 A 120/240 V inlet carries up to 7,200 W.
+- [Generator vs power station](https://willitrunpower.com/guides/generator-vs-power-station)
+- [What size generator for a 30 amp inlet](https://willitrunpower.com/guides/generator-size-for-30-amp-inlet)
+- [Best generator for home backup](https://willitrunpower.com/guides/best-generator-for-home-backup)
+- [Quietest inverter generators](https://willitrunpower.com/guides/quietest-inverter-generators)
