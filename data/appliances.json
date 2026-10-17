@@ -10,7 +10,7 @@
     "averageW": 24.9,
     "dutyCycle": 0.375,
     "sourceUrl": "https://www.danby.com/products/compact-refrigerators/dcr032c1wdb/",
-    "sourceNote": "Danby lists 115 V, 66.4 W, and 218 kWh/year. Average draw is 218 × 1,000 ÷ 8,760 = 24.9 W. Duty cycle 0.375 is that average divided by 66.4 W, so it is an annual-average compressor fraction, not a hot-day measurement. Startup watts are not published."
+    "sourceNote": "Danby lists 115 V, 66.4 W, and 218 kWh/year. Average draw is 218 \u00d7 1,000 \u00f7 8,760 = 24.9 W. Duty cycle 0.375 is that average divided by 66.4 W, so it is an annual-average compressor fraction, not a hot-day measurement. Startup watts are not published."
   },
   {
     "slug": "danby-dar032b1slm",
@@ -62,7 +62,7 @@
     "averageW": 38,
     "dutyCycle": null,
     "sourceUrl": "https://data.energystar.gov/d/p5st-her9",
-    "sourceNote": "ENERGY STAR lists 333 kWh/year for RT18DG6300**, a 17.5 cu ft top freezer with no ice maker. Average draw is 333 × 1,000 ÷ 8,760 = 38.0 W. Compressor running watts and startup watts are not in the listing, so Willrun will not issue a runs or won't-run verdict."
+    "sourceNote": "ENERGY STAR lists 333 kWh/year for RT18DG6300**, a 17.5 cu ft top freezer with no ice maker. Average draw is 333 \u00d7 1,000 \u00f7 8,760 = 38.0 W. Compressor running watts and startup watts are not in the listing, so Willrun will not issue a runs or won't-run verdict."
   },
   {
     "slug": "whirlpool-wzc3209lw",
@@ -114,7 +114,7 @@
     "averageW": 347.2,
     "dutyCycle": null,
     "sourceUrl": "https://data.energystar.gov/d/5xn2-dv4h",
-    "sourceNote": "ENERGY STAR lists 5,000 Btu/h, CEER 14.4, 115 V, variable-speed compressor, and 260.4 kWh/year. Rated input is 5,000 ÷ 14.4 = 347.2 W. That matches the listed annual energy at the DOE room-AC assumption of 750 hours (347.2 × 750 ÷ 1,000 = 260.4). The 347.2 W figure is the draw while cooling at the rated condition, not a whole-year average. Startup watts are not published."
+    "sourceNote": "ENERGY STAR lists 5,000 Btu/h, CEER 14.4, 115 V, variable-speed compressor, and 260.4 kWh/year. Rated input is 5,000 \u00f7 14.4 = 347.2 W. That matches the listed annual energy at the DOE room-AC assumption of 750 hours (347.2 \u00d7 750 \u00f7 1,000 = 260.4). The 347.2 W figure is the draw while cooling at the rated condition, not a whole-year average. Startup watts are not published."
   },
   {
     "slug": "black-decker-bd08nwes",
@@ -127,7 +127,7 @@
     "averageW": 533.3,
     "dutyCycle": null,
     "sourceUrl": "https://data.energystar.gov/d/5xn2-dv4h",
-    "sourceNote": "ENERGY STAR lists 8,000 Btu/h, CEER 15, 115 V, variable-speed compressor, and 400 kWh/year. Rated input is 8,000 ÷ 15 = 533.3 W, which matches 400 kWh at 750 hours. Startup watts are not published."
+    "sourceNote": "ENERGY STAR lists 8,000 Btu/h, CEER 15, 115 V, variable-speed compressor, and 400 kWh/year. Rated input is 8,000 \u00f7 15 = 533.3 W, which matches 400 kWh at 750 hours. Startup watts are not published."
   },
   {
     "slug": "black-decker-bd12nwes",
@@ -140,7 +140,7 @@
     "averageW": 800,
     "dutyCycle": null,
     "sourceUrl": "https://data.energystar.gov/d/5xn2-dv4h",
-    "sourceNote": "ENERGY STAR lists 12,000 Btu/h, CEER 15, 115 V, variable-speed compressor, and 600 kWh/year. Rated input is 12,000 ÷ 15 = 800 W, which matches 600 kWh at 750 hours. Startup watts are not published."
+    "sourceNote": "ENERGY STAR lists 12,000 Btu/h, CEER 15, 115 V, variable-speed compressor, and 600 kWh/year. Rated input is 12,000 \u00f7 15 = 800 W, which matches 600 kWh at 750 hours. Startup watts are not published."
   },
   {
     "slug": "ge-pwjv10",
@@ -153,7 +153,7 @@
     "averageW": 625,
     "dutyCycle": null,
     "sourceUrl": "https://data.energystar.gov/d/5xn2-dv4h",
-    "sourceNote": "ENERGY STAR lists model PWJV10W**# at 10,000 Btu/h, CEER 16, and 468.8 kWh/year, with a variable-speed compressor. Rated input is 10,000 ÷ 16 = 625 W. 625 × 750 ÷ 1,000 = 468.75, which rounds to the listed 468.8 kWh. Startup watts are not published."
+    "sourceNote": "ENERGY STAR lists model PWJV10W**# at 10,000 Btu/h, CEER 16, and 468.8 kWh/year, with a variable-speed compressor. Rated input is 10,000 \u00f7 16 = 625 W. 625 \u00d7 750 \u00f7 1,000 = 468.75, which rounds to the listed 468.8 kWh. Startup watts are not published."
   },
   {
     "slug": "zoeller-m53",
@@ -166,7 +166,7 @@
     "averageW": null,
     "dutyCycle": null,
     "sourceUrl": "https://zoellerpumps.com/product/model-m53-sump-pump/",
-    "sourceNote": "Zoeller lists the Model 53 at 3/10 HP, 115 V or 230 V, and 4.8–9.7 A. The 115 V automatic model in Zoeller's 50-series technical table is 9.7 A. Running watts used here are 9.7 × 115 = 1,115.5 W. Startup amps are not published. How often the float runs is site-specific, so no duty cycle is stored."
+    "sourceNote": "Zoeller lists the Model 53 at 3/10 HP, 115 V or 230 V, and 4.8\u20139.7 A. The 115 V automatic model in Zoeller's 50-series technical table is 9.7 A. Running watts used here are 9.7 \u00d7 115 = 1,115.5 W. Startup amps are not published. How often the float runs is site-specific, so no duty cycle is stored."
   },
   {
     "slug": "resmed-airsense-11",
@@ -296,7 +296,7 @@
     "averageW": 485,
     "dutyCycle": null,
     "sourceUrl": "https://data.energystar.gov/d/mgiu-hu4z",
-    "sourceNote": "ENERGY STAR lists 49.43 pints/day, integrated energy factor 2.01 L/kWh, and 520 kWh/year. Operating draw at the rated test condition is (49.43 × 0.473176 L/pint ÷ 24 h) ÷ 2.01 L/kWh × 1,000 = 485 W. That is the draw while it is removing water at the rated rate, not a whole-year average. Startup watts are not published."
+    "sourceNote": "ENERGY STAR lists 49.43 pints/day, integrated energy factor 2.01 L/kWh, and 520 kWh/year. Operating draw at the rated test condition is (49.43 \u00d7 0.473176 L/pint \u00f7 24 h) \u00f7 2.01 L/kWh \u00d7 1,000 = 485 W. That is the draw while it is removing water at the rated rate, not a whole-year average. Startup watts are not published."
   },
   {
     "slug": "frigidaire-fhdd2233y1",
@@ -309,7 +309,7 @@
     "averageW": 258,
     "dutyCycle": null,
     "sourceUrl": "https://data.energystar.gov/d/mgiu-hu4z",
-    "sourceNote": "ENERGY STAR lists 22.27 pints/day, integrated energy factor 1.70 L/kWh, and 276 kWh/year. Operating draw at the rated test condition is (22.27 × 0.473176 ÷ 24) ÷ 1.70 × 1,000 = 258 W. Startup watts are not published."
+    "sourceNote": "ENERGY STAR lists 22.27 pints/day, integrated energy factor 1.70 L/kWh, and 276 kWh/year. Operating draw at the rated test condition is (22.27 \u00d7 0.473176 \u00f7 24) \u00f7 1.70 \u00d7 1,000 = 258 W. Startup watts are not published."
   },
   {
     "slug": "hunter-52774",
@@ -348,7 +348,7 @@
     "averageW": 16.7,
     "dutyCycle": 1,
     "sourceUrl": "https://data.energystar.gov/d/8dv7-nngq",
-    "sourceNote": "ENERGY STAR lists 50 CFM and 3 CFM/W for this bathroom/utility fan. Draw is 50 ÷ 3 = 16.7 W. Startup watts are not published."
+    "sourceNote": "ENERGY STAR lists 50 CFM and 3 CFM/W for this bathroom/utility fan. Draw is 50 \u00f7 3 = 16.7 W. Startup watts are not published."
   },
   {
     "slug": "broan-744",
@@ -361,7 +361,7 @@
     "averageW": 17.5,
     "dutyCycle": 1,
     "sourceUrl": "https://data.energystar.gov/d/8dv7-nngq",
-    "sourceNote": "ENERGY STAR lists 70 CFM and 4 CFM/W. Draw is 70 ÷ 4 = 17.5 W. Startup watts are not published."
+    "sourceNote": "ENERGY STAR lists 70 CFM and 4 CFM/W. Draw is 70 \u00f7 4 = 17.5 W. Startup watts are not published."
   },
   {
     "slug": "simply-conserve-a19",
@@ -465,7 +465,7 @@
     "averageW": 900,
     "dutyCycle": 1,
     "sourceUrl": "https://lasko.com/products/lasko-1500w-digital-ceramic-space-heater-with-remote-755320-silver",
-    "sourceNote": "Same Lasko listing: energy output 900 W to 1,500 W. Low is the 900 W end of that range. 7.5 A × 120 V = 900 W."
+    "sourceNote": "Same Lasko listing: energy output 900 W to 1,500 W. Low is the 900 W end of that range. 7.5 A \u00d7 120 V = 900 W."
   },
   {
     "slug": "panasonic-nn-su656",
@@ -518,5 +518,148 @@
     "dutyCycle": 1,
     "sourceUrl": "https://data.energystar.gov/d/m6gi-ng33",
     "sourceNote": "ENERGY STAR lists zone 2 of LCE3010SBE at 1,900 W. This entry is that zone alone, not two zones together."
+  },
+  {
+    "slug": "resmed-airsense-11-humidifier",
+    "name": "ResMed AirSense 11 with HumidAir 11 humidifier, no heated tube",
+    "category": "Medical",
+    "loadKind": "electronics",
+    "boostEligible": false,
+    "runningW": 19,
+    "surgeW": null,
+    "averageW": 19,
+    "dutyCycle": 1,
+    "sourceUrl": "https://www.resmed-healthcare.de/wp-content/uploads/2025/10/1018528r11_Uebers_Stromverbrauch-Geraete_RDE_PDF-1.pdf",
+    "sourceNote": "ResMed's therapy-device power table (ResMed Deutschland, Art.-Nr. 1018528/11) lists AirSense 11 AutoSet with HumidAir 11 at 19 Wh during operation. Energy per hour equals average watts, so the average draw is 19 W. ResMed notes the values were measured in a lab and that a local meter can differ."
+  },
+  {
+    "slug": "resmed-airsense-10-no-humidifier",
+    "name": "ResMed AirSense 10 AutoSet, no humidifier",
+    "category": "Medical",
+    "loadKind": "electronics",
+    "boostEligible": false,
+    "runningW": 7,
+    "surgeW": null,
+    "averageW": 7,
+    "dutyCycle": 1,
+    "sourceUrl": "https://www.resmed-healthcare.de/wp-content/uploads/2025/10/1018528r11_Uebers_Stromverbrauch-Geraete_RDE_PDF-1.pdf",
+    "sourceNote": "ResMed's therapy-device power table (ResMed Deutschland, Art.-Nr. 1018528/11) lists AirSense 10 AutoSet at 7 Wh during operation. Energy per hour equals average watts, so the average draw is 7 W. ResMed notes the values were measured in a lab and that a local meter can differ."
+  },
+  {
+    "slug": "resmed-airsense-10",
+    "name": "ResMed AirSense 10 AutoSet with HumidAir humidifier",
+    "category": "Medical",
+    "loadKind": "electronics",
+    "boostEligible": false,
+    "runningW": 22,
+    "surgeW": null,
+    "averageW": 22,
+    "dutyCycle": 1,
+    "sourceUrl": "https://www.resmed-healthcare.de/wp-content/uploads/2025/10/1018528r11_Uebers_Stromverbrauch-Geraete_RDE_PDF-1.pdf",
+    "sourceNote": "ResMed's therapy-device power table (ResMed Deutschland, Art.-Nr. 1018528/11) lists AirSense 10 AutoSet with HumidAir at 22 Wh during operation. Energy per hour equals average watts, so the average draw is 22 W. ResMed notes the values were measured in a lab and that a local meter can differ."
+  },
+  {
+    "slug": "resmed-airsense-10-heated-tube",
+    "name": "ResMed AirSense 10 with HumidAir and ClimateLineAir heated tube",
+    "category": "Medical",
+    "loadKind": "electronics",
+    "boostEligible": false,
+    "runningW": 34,
+    "surgeW": null,
+    "averageW": 34,
+    "dutyCycle": 1,
+    "sourceUrl": "https://www.resmed-healthcare.de/wp-content/uploads/2025/10/1018528r11_Uebers_Stromverbrauch-Geraete_RDE_PDF-1.pdf",
+    "sourceNote": "ResMed's therapy-device power table (ResMed Deutschland, Art.-Nr. 1018528/11) lists AirSense 10 AutoSet with HumidAir and heated ClimateLineAir tube at 34 Wh during operation. Energy per hour equals average watts, so the average draw is 34 W. ResMed notes the values were measured in a lab and that a local meter can differ."
+  },
+  {
+    "slug": "resmed-aircurve-10-vauto-no-humidifier",
+    "name": "ResMed AirCurve 10 VAuto BiPAP, no humidifier",
+    "category": "Medical",
+    "loadKind": "electronics",
+    "boostEligible": false,
+    "runningW": 9,
+    "surgeW": null,
+    "averageW": 9,
+    "dutyCycle": 1,
+    "sourceUrl": "https://www.resmed-healthcare.de/wp-content/uploads/2025/10/1018528r11_Uebers_Stromverbrauch-Geraete_RDE_PDF-1.pdf",
+    "sourceNote": "ResMed's therapy-device power table (ResMed Deutschland, Art.-Nr. 1018528/11) lists AirCurve 10 VAuto at 9 Wh during operation. Energy per hour equals average watts, so the average draw is 9 W. ResMed notes the values were measured in a lab and that a local meter can differ."
+  },
+  {
+    "slug": "resmed-aircurve-10-vauto",
+    "name": "ResMed AirCurve 10 VAuto BiPAP with HumidAir humidifier",
+    "category": "Medical",
+    "loadKind": "electronics",
+    "boostEligible": false,
+    "runningW": 23,
+    "surgeW": null,
+    "averageW": 23,
+    "dutyCycle": 1,
+    "sourceUrl": "https://www.resmed-healthcare.de/wp-content/uploads/2025/10/1018528r11_Uebers_Stromverbrauch-Geraete_RDE_PDF-1.pdf",
+    "sourceNote": "ResMed's therapy-device power table (ResMed Deutschland, Art.-Nr. 1018528/11) lists AirCurve 10 VAuto with HumidAir at 23 Wh during operation. Energy per hour equals average watts, so the average draw is 23 W. ResMed notes the values were measured in a lab and that a local meter can differ."
+  },
+  {
+    "slug": "resmed-aircurve-10-vauto-heated-tube",
+    "name": "ResMed AirCurve 10 VAuto BiPAP with HumidAir and heated tube",
+    "category": "Medical",
+    "loadKind": "electronics",
+    "boostEligible": false,
+    "runningW": 41,
+    "surgeW": null,
+    "averageW": 41,
+    "dutyCycle": 1,
+    "sourceUrl": "https://www.resmed-healthcare.de/wp-content/uploads/2025/10/1018528r11_Uebers_Stromverbrauch-Geraete_RDE_PDF-1.pdf",
+    "sourceNote": "ResMed's therapy-device power table (ResMed Deutschland, Art.-Nr. 1018528/11) lists AirCurve 10 VAuto with HumidAir and heated ClimateLineAir tube at 41 Wh during operation. Energy per hour equals average watts, so the average draw is 41 W. ResMed notes the values were measured in a lab and that a local meter can differ."
+  },
+  {
+    "slug": "resmed-aircurve-11-vauto-no-humidifier",
+    "name": "ResMed AirCurve 11 VAuto BiPAP, no humidifier",
+    "category": "Medical",
+    "loadKind": "electronics",
+    "boostEligible": false,
+    "runningW": 8,
+    "surgeW": null,
+    "averageW": 8,
+    "dutyCycle": 1,
+    "sourceUrl": "https://www.resmed-healthcare.de/wp-content/uploads/2025/10/1018528r11_Uebers_Stromverbrauch-Geraete_RDE_PDF-1.pdf",
+    "sourceNote": "ResMed's therapy-device power table (ResMed Deutschland, Art.-Nr. 1018528/11) lists AirCurve 11 VAuto at 8 Wh during operation. Energy per hour equals average watts, so the average draw is 8 W. ResMed notes the values were measured in a lab and that a local meter can differ."
+  },
+  {
+    "slug": "resmed-aircurve-11-vauto",
+    "name": "ResMed AirCurve 11 VAuto BiPAP with HumidAir humidifier",
+    "category": "Medical",
+    "loadKind": "electronics",
+    "boostEligible": false,
+    "runningW": 34,
+    "surgeW": null,
+    "averageW": 34,
+    "dutyCycle": 1,
+    "sourceUrl": "https://www.resmed-healthcare.de/wp-content/uploads/2025/10/1018528r11_Uebers_Stromverbrauch-Geraete_RDE_PDF-1.pdf",
+    "sourceNote": "ResMed's therapy-device power table (ResMed Deutschland, Art.-Nr. 1018528/11) lists AirCurve 11 VAuto with HumidAir at 34 Wh during operation. Energy per hour equals average watts, so the average draw is 34 W. ResMed notes the values were measured in a lab and that a local meter can differ."
+  },
+  {
+    "slug": "resmed-aircurve-11-vauto-heated-tube",
+    "name": "ResMed AirCurve 11 VAuto BiPAP with HumidAir and heated tube",
+    "category": "Medical",
+    "loadKind": "electronics",
+    "boostEligible": false,
+    "runningW": 66,
+    "surgeW": null,
+    "averageW": 66,
+    "dutyCycle": 1,
+    "sourceUrl": "https://www.resmed-healthcare.de/wp-content/uploads/2025/10/1018528r11_Uebers_Stromverbrauch-Geraete_RDE_PDF-1.pdf",
+    "sourceNote": "ResMed's therapy-device power table (ResMed Deutschland, Art.-Nr. 1018528/11) lists AirCurve 11 VAuto with HumidAir and heated ClimateLineAir tube at 66 Wh during operation. Energy per hour equals average watts, so the average draw is 66 W. ResMed notes the values were measured in a lab and that a local meter can differ."
+  },
+  {
+    "slug": "philips-dreamstation-max-rated",
+    "name": "Philips DreamStation, worst case at the 80 W power supply rating",
+    "category": "Medical",
+    "loadKind": "electronics",
+    "boostEligible": false,
+    "runningW": 80,
+    "surgeW": null,
+    "averageW": 80,
+    "dutyCycle": 1,
+    "sourceUrl": "https://www.documents.philips.com/doclib/enc/11410694/DreamStation_Humidifier_User_Manual.pdf",
+    "sourceNote": "Philips does not publish a typical DreamStation draw. The DreamStation Heated Humidifier manual lists the 80 W power supply and DC power consumption of 12 VDC at 6.67 A (80 W). Willrun uses that ceiling as a worst case, so real nights will usually last longer. Heated tubing is powered through the humidifier."
   }
 ]

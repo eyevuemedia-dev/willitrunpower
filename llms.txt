@@ -8,7 +8,7 @@ Willrun is a static site. Every station and appliance row cites a manufacturer o
 - [Calculator](https://willitrunpower.com/): pick a station, add appliances, read the verdict.
 - [Methodology](https://willitrunpower.com/methodology): the 0.85 allowance, duty cycle, and how surge is treated.
 - [Stations](https://willitrunpower.com/stations): 24 models.
-- [Appliances](https://willitrunpower.com/appliances): 40 loads.
+- [Appliances](https://willitrunpower.com/appliances): 51 loads.
 - [Affiliate disclosure](https://willitrunpower.com/disclosure)
 
 ## Guides
@@ -18,6 +18,29 @@ Willrun is a static site. Every station and appliance row cites a manufacturer o
 - [Best power station for an RV](https://willitrunpower.com/best-power-station-for/rv): An 8,000 Btu/h BLACK+DECKER window unit draws about 533 W while cooling. Stations at or above 600 W continuous can hold that running load, and the DELTA Pro 3 and F3800 add 120/240 V outlets the smaller packs do not have. None of them publish a match for the compressor's startup watts.
 - [Best power station for home backup](https://willitrunpower.com/best-power-station-for/home-backup): On stored energy alone, the EcoFlow DELTA Pro 3 (4,096 Wh) outlasts the Anker SOLIX F3800 (3,840 Wh), while the F3800 has the higher continuous output at 6,000 W. A 1,500 W Lasko heater needs at least 1,500 W continuous or a documented resistive boost.
 - [Best power station for a sump pump](https://willitrunpower.com/best-power-station-for/sump-pump): The Zoeller Model 53 at 115 V draws 1,115.5 W while running. Stations under that — including the RIVER 2 series, the AC70, and the Yeti 500X — will not hold it. Stations above it still carry a surge risk because Zoeller does not publish starting amps.
+
+## CPAP and BiPAP
+Watt figures come from ResMed's published therapy-device power table and the Philips DreamStation humidifier manual (80 W supply, used as a worst case). Medical pages carry a safety notice: estimates only, confirm approved power sources with the manufacturer and your supplier.
+- [CPAP and BiPAP on battery power: every model and setting](https://willitrunpower.com/cpap/): A CPAP night costs anywhere from about 50 Wh to more than 500 Wh. The humidifier and heated tube decide the size of power station you need, not the machine.
+- [Best power station for a CPAP](https://willitrunpower.com/best-power-station-for/cpap/): For a CPAP, capacity matters more than inverter size. Without humidity, even a 256 Wh station covers several nights; with a heated tube, plan on about 1 kWh for two nights.
+- [CPAP during a power outage: how long each setup lasts](https://willitrunpower.com/cpap-during-power-outage/): Turn the humidifier and heated tube off during an outage if your doctor agrees. On ResMed's figures that cuts nightly use from about 440 Wh to about 56 Wh.
+- [CPAP camping: how to power a CPAP with no electricity](https://willitrunpower.com/cpap-camping/): For camping, turn humidity off and use the DC cord if your machine has one. An AirSense 11 then needs about 56 Wh a night, so a 256 Wh station covers about four nights.
+- [How many watts does a CPAP use? Every ResMed setting](https://willitrunpower.com/how-many-watts-does-a-cpap-use/): ResMed measures its CPAPs at 6.3 to 7 W without a humidifier, 19 to 22 W with a humidifier, and 34 to 55 W with a heated tube.
+- [BiPAP battery backup: ResMed AirCurve runtimes](https://willitrunpower.com/bipap-battery-backup/): A ResMed AirCurve BiPAP uses 8 to 9 W without a humidifier and up to 66 W with a humidifier and heated tube, close to a CPAP.
+- [CPAP on DC vs AC: which lasts longer on a power station?](https://willitrunpower.com/cpap-dc-vs-ac-power-station/): Running a CPAP from a power station's 12 V port with the maker's DC cord skips the station's inverter, so it usually lasts longer than the AC estimates on this site.
+- [Can a car battery run a CPAP? The real math](https://willitrunpower.com/can-a-car-battery-run-a-cpap/): A typical 12 V car battery can run a CPAP without humidity for a night, but deep discharges damage car batteries, and Philips warns against running its machines while the engine is running.
+- [What size solar panel do you need for a CPAP?](https://willitrunpower.com/cpap-solar-panel-size/): To refill one CPAP night from the sun, divide the nightly watt-hours by your sun hours and allow for loss. Without humidity, a 50 W panel is plenty; with a heated tube, plan on about 150 W.
+- [Will a power station run ResMed AirSense 11 with HumidAir 11 humidifier, no heated tube?](https://willitrunpower.com/appliance/resmed-airsense-11-humidifier/)
+- [Will a power station run ResMed AirSense 10 AutoSet, no humidifier?](https://willitrunpower.com/appliance/resmed-airsense-10-no-humidifier/)
+- [Will a power station run ResMed AirSense 10 AutoSet with HumidAir humidifier?](https://willitrunpower.com/appliance/resmed-airsense-10/)
+- [Will a power station run ResMed AirSense 10 with HumidAir and ClimateLineAir heated tube?](https://willitrunpower.com/appliance/resmed-airsense-10-heated-tube/)
+- [Will a power station run ResMed AirCurve 10 VAuto BiPAP, no humidifier?](https://willitrunpower.com/appliance/resmed-aircurve-10-vauto-no-humidifier/)
+- [Will a power station run ResMed AirCurve 10 VAuto BiPAP with HumidAir humidifier?](https://willitrunpower.com/appliance/resmed-aircurve-10-vauto/)
+- [Will a power station run ResMed AirCurve 10 VAuto BiPAP with HumidAir and heated tube?](https://willitrunpower.com/appliance/resmed-aircurve-10-vauto-heated-tube/)
+- [Will a power station run ResMed AirCurve 11 VAuto BiPAP, no humidifier?](https://willitrunpower.com/appliance/resmed-aircurve-11-vauto-no-humidifier/)
+- [Will a power station run ResMed AirCurve 11 VAuto BiPAP with HumidAir humidifier?](https://willitrunpower.com/appliance/resmed-aircurve-11-vauto/)
+- [Will a power station run ResMed AirCurve 11 VAuto BiPAP with HumidAir and heated tube?](https://willitrunpower.com/appliance/resmed-aircurve-11-vauto-heated-tube/)
+- [Will a power station run Philips DreamStation, worst case at the 80 W power supply rating?](https://willitrunpower.com/appliance/philips-dreamstation-max-rated/)
 
 ## Outages
 - [24-hour outage](https://willitrunpower.com/outage/24-hour): EcoFlow DELTA 2 Max, EcoFlow DELTA Pro 3, BLUETTI AC200L, Jackery Explorer 2000 Plus, Jackery Explorer 2000 v2, Anker SOLIX F2000 (PowerHouse 767), Anker SOLIX F3800 have enough nameplate watt-hours, after the 85% allowance, for this 24-hour mix (1,608 Wh of load).
