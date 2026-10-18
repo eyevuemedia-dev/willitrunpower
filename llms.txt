@@ -63,7 +63,7 @@ Watt figures come from ResMed's published therapy-device power table and the Phi
 ## Data
 - [stations.json](https://willitrunpower.com/data/stations.json)
 - [appliances.json](https://willitrunpower.com/data/appliances.json)
-- [links.json](https://willitrunpower.com/data/links.json): affiliate hrefs. Null means the Check price button opens the manufacturer page.
+- [links.json](https://willitrunpower.com/data/links.json): retailer link map (unused). Check price buttons are Amazon search links tagged with the Associates ID; see /disclosure/.
 
 Full text for answer pages: https://willitrunpower.com/llms-full.txt
 
