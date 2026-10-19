@@ -52,7 +52,7 @@
     "chemistry": "LiFePO4",
     "cycles": 3000,
     "cyclesRetention": "80%+",
-    "weightLb": 17.2,
+    "weightLb":18.2,
     "dimensionsIn": "10.6 × 10.2 × 8.9",
     "outlets": "4 AC outlets, 800 W shared, plus USB-A, USB-C (100 W), and 12.6 V DC ports.",
     "launchPriceUsd": null,
