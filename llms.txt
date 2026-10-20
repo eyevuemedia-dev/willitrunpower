@@ -2,7 +2,7 @@
 
 > Willrun answers whether a specific portable power station or generator can run a specific appliance, using published running and starting watts, an 85% inverter allowance for stations, and 30 amp inlet math for home backup.
 
-Willrun is a static site. Every station and appliance row cites a manufacturer or ENERGY STAR URL. Runtime is nameplate watt-hours times 0.85, divided by average draw. Verdicts are runs, runs with surge risk, won't run, or no run verdict when running watts were not published.
+Willrun is a static site. Every station and appliance row cites a manufacturer or ENERGY STAR URL. Runtime is nameplate watt-hours times 0.85, divided by average draw. For CPAP and BiPAP on AC, Willrun also adds about 15 W of inverter self-consumption (the figure BLUETTI uses for its AC180) to the draw, and shows DC-converter nights separately as a best case. Verdicts are runs, runs with surge risk, won't run, or no run verdict when running watts were not published.
 
 ## Start here
 - [Calculator](https://willitrunpower.com/): pick a station, add appliances, read the verdict.
@@ -21,15 +21,15 @@ Willrun is a static site. Every station and appliance row cites a manufacturer o
 
 ## CPAP and BiPAP
 Watt figures come from ResMed's published therapy-device power table and the Philips DreamStation humidifier manual (80 W supply, used as a worst case). Medical pages carry a safety notice: estimates only, confirm approved power sources with the manufacturer and your supplier.
-- [CPAP and BiPAP on battery power: every model and setting](https://willitrunpower.com/cpap/): A CPAP night costs anywhere from about 50 Wh to more than 500 Wh. The humidifier and heated tube decide the size of power station you need, not the machine.
+- [CPAP and BiPAP on battery power: every model and setting](https://willitrunpower.com/cpap/): A CPAP night costs anywhere from about 50 Wh to more than 500 Wh. The humidifier and heated tube decide the size of power station you need, not the machine. Tables show AC nights (including about 15 W of inverter draw) and DC-converter nights separately; e.g. an AirSense 11 with no humidifier gets about 4.9 nights on a 1,024 Wh station on AC versus up to 15.5 on DC.
 - [Best power station for a CPAP](https://willitrunpower.com/best-power-station-for/cpap/): Buying guide with picks by situation (bedside UPS, camping on DC, budget, multi-night heated humidity) and runtimes that include about 15 W of inverter idle draw on AC.
 - [CPAP during a power outage: how long each setup lasts](https://willitrunpower.com/cpap-during-power-outage/): Turn the humidifier and heated tube off during an outage if your doctor agrees. On ResMed's figures that cuts nightly use from about 440 Wh to about 56 Wh.
 - [CPAP camping: how to power a CPAP with no electricity](https://willitrunpower.com/cpap-camping/): For camping, turn humidity off and use the DC cord if your machine has one. An AirSense 11 then needs about 56 Wh a night, so a 256 Wh station covers about four nights.
 - [How many watts does a CPAP use? Every ResMed setting](https://willitrunpower.com/how-many-watts-does-a-cpap-use/): ResMed measures its CPAPs at 6.3 to 7 W without a humidifier, 19 to 22 W with a humidifier, and 34 to 55 W with a heated tube.
 - [BiPAP battery backup: ResMed AirCurve runtimes](https://willitrunpower.com/bipap-battery-backup/): A ResMed AirCurve BiPAP uses 8 to 9 W without a humidifier and up to 66 W with a humidifier and heated tube, close to a CPAP.
-- [CPAP on DC vs AC: which lasts longer on a power station?](https://willitrunpower.com/cpap-dc-vs-ac-power-station/): Running a CPAP from a power station's 12 V port with the maker's DC cord skips the station's inverter, so it usually lasts longer than the AC estimates on this site.
+- [CPAP on DC vs AC: which lasts longer on a power station?](https://willitrunpower.com/cpap-dc-vs-ac-power-station/): Running a CPAP from a power station's 12 V port with the maker's DC cord skips the station's inverter, so it usually lasts longer than the AC estimates on this site. With the humidifier off the gap is about 3x, because the inverter's own ~15 W draw is more than the CPAP's.
 - [Can a car battery run a CPAP? The real math](https://willitrunpower.com/can-a-car-battery-run-a-cpap/): A typical 12 V car battery can run a CPAP without humidity for a night, but deep discharges damage car batteries, and Philips warns against running its machines while the engine is running.
-- [What size solar panel do you need for a CPAP?](https://willitrunpower.com/cpap-solar-panel-size/): To refill one CPAP night from the sun, divide the nightly watt-hours by your sun hours and allow for loss. Without humidity, a 50 W panel is plenty; with a heated tube, plan on about 150 W.
+- [What size solar panel do you need for a CPAP?](https://willitrunpower.com/cpap-solar-panel-size/): To refill one CPAP night from the sun, divide the nightly watt-hours by your sun hours and allow for loss. Without humidity on a DC cord, a 50 W panel is plenty (about 60 W if the CPAP runs on AC); with a heated tube, plan on about 150 W, or 190 W on AC.
 - [Will a power station run ResMed AirSense 11 with HumidAir 11 humidifier, no heated tube?](https://willitrunpower.com/appliance/resmed-airsense-11-humidifier/)
 - [Will a power station run ResMed AirSense 10 AutoSet, no humidifier?](https://willitrunpower.com/appliance/resmed-airsense-10-no-humidifier/)
 - [Will a power station run ResMed AirSense 10 AutoSet with HumidAir humidifier?](https://willitrunpower.com/appliance/resmed-airsense-10/)

@@ -2,7 +2,7 @@
 
 > Willrun answers whether a specific portable power station or generator can run a specific appliance, using published running and starting watts, an 85% inverter allowance for stations, and 30 amp inlet math for home backup.
 
-Willrun is a static site. Every station and appliance row cites a manufacturer or ENERGY STAR URL. Runtime is nameplate watt-hours times 0.85, divided by average draw. Verdicts are runs, runs with surge risk, won't run, or no run verdict when running watts were not published.
+Willrun is a static site. Every station and appliance row cites a manufacturer or ENERGY STAR URL. Runtime is nameplate watt-hours times 0.85, divided by average draw. For CPAP and BiPAP on AC, Willrun also adds about 15 W of inverter self-consumption (the figure BLUETTI uses for its AC180) to the draw, and shows DC-converter nights separately as a best case. Verdicts are runs, runs with surge risk, won't run, or no run verdict when running watts were not published.
 
 ## Start here
 - [Calculator](https://willitrunpower.com/): pick a station, add appliances, read the verdict.
@@ -115,7 +115,7 @@ Product spec: 512 Wh and 500 W (surge 1,000 W). The same 1,000 W is the X-Boost 
 ## EcoFlow RIVER 2 Pro
 
 Page: https://willitrunpower.com/station/ecoflow-river-2-pro/
-Capacity 768 Wh, continuous 800 W, motor surge not applied, resistive boost X-Boost 1600 W, LiFePO4, weight 17.2 lb.
+Capacity 768 Wh, continuous 800 W, motor surge not applied, resistive boost X-Boost 1600 W, LiFePO4, weight 18.2 lb.
 Source: https://us.ecoflow.com/products/river-2-pro-portable-power-station
 Product spec: 768 Wh, pure sine wave, 800 W total (surge 1,600 W). Comparison table lists the same 1,600 W as X-Boost, 4 AC outlets, and 17.2 lb. Treated as resistive boost, not motor-start capacity.
 
