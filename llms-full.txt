@@ -596,6 +596,7 @@ ENERGY STAR lists zone 2 of LCE3010SBE at 1,900 W. This entry is that zone alone
 - [All generators](https://willitrunpower.com/generators/): 20 portable gas, dual-fuel and inverter models with running and starting watts.
 - [Whole house via a 30 amp inlet](https://willitrunpower.com/whole-house-30-amp-inlet/): a 30 A 120/240 V inlet carries up to 7,200 W.
 - [Generator vs power station](https://willitrunpower.com/guides/generator-vs-power-station/)
+- [What size generator do you need to run a house?](https://willitrunpower.com/guides/what-size-generator-for-a-house/): running plus biggest starting watts for 7 house scenarios (essentials ~3,544 W running / 5,694 W worst start; 240 V well pump; central AC = standby), from Honda, Champion, Generac and Franklin charts.
 - [What size generator for a 30 amp inlet](https://willitrunpower.com/guides/generator-size-for-30-amp-inlet/)
 - [Best generator for home backup](https://willitrunpower.com/guides/best-generator-for-home-backup/)
 - [Quietest inverter generators](https://willitrunpower.com/guides/quietest-inverter-generators/)
