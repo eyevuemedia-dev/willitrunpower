@@ -2,7 +2,7 @@
 
 > Willrun answers whether a specific portable power station or generator can run a specific appliance, using published running and starting watts, an 85% inverter allowance for stations, and 30 amp inlet math for home backup.
 
-Willrun is a static site. Every station and appliance row cites a manufacturer or ENERGY STAR URL. Runtime is nameplate watt-hours times 0.85, divided by average draw. For CPAP and BiPAP on AC, Willrun also adds about 15 W of inverter self-consumption (the figure BLUETTI uses for its AC180) to the draw, and shows DC-converter nights separately as a best case. Verdicts are runs, runs with surge risk, won't run, or no run verdict when running watts were not published.
+Willrun is a static site. Every station and appliance row cites a manufacturer or ENERGY STAR URL. Runtime is nameplate watt-hours times 0.85, divided by average draw. The calculator, outage planners, brand comparison and CPAP/BiPAP pages also add about 15 W of inverter self-consumption (the figure BLUETTI uses for its AC180) to the draw: Wh × 0.85 ÷ (W + 15). CPAP pages show DC-converter nights separately as a best case. Verdicts are runs, runs with surge risk, won't run, or no run verdict when running watts were not published.
 
 ## Start here
 - [Calculator](https://willitrunpower.com/): pick a station, add appliances, read the verdict.
@@ -12,6 +12,7 @@ Willrun is a static site. Every station and appliance row cites a manufacturer o
 - [Affiliate disclosure](https://willitrunpower.com/disclosure/)
 
 ## Guides
+- [EcoFlow vs Jackery vs BLUETTI: which one should you buy?](https://willitrunpower.com/guides/ecoflow-vs-jackery-vs-bluetti/): brand comparison by decision (budget and $/Wh, outage length with ~15 W inverter draw, CPAP/UPS switchover, solar input, warranty fine print, app and expansion) with maker prices checked 2026-10-21. EcoFlow: fastest published UPS (<10 ms DELTA 3 Plus / RIVER 3 Plus), most solar and expansion. Jackery: lightest per kWh (1000 v2 23.8 lb, 2000 v2 39.5 lb), but 400 W solar and no expansion on v2, warranty 3+2 only via authorized sellers. BLUETTI: AC180 cheapest per Wh ($0.43, out of stock to late Nov), AC200L $899 with 1,200 W solar, 7,200 W surge, 8,192 Wh expansion.
 - [Best power station for a refrigerator in a power outage](https://willitrunpower.com/best-power-station-for/fridge/): ENERGY STAR median use by fridge type (top-freezer 363 kWh/yr, bottom-freezer 538, side-by-side 640, door-ice French door 715), a 1,200 W motor-start surge rule (Haier 805 W start-up; Champion 800–1,200 W), runtimes on 13 stations, capacity needed for 12 h to 3 days, and solar panel watts by state vs each station's solar input limit.
 - [Best power station for a CPAP](https://willitrunpower.com/best-power-station-for/cpap/): Buying guide by decision: humidifier vs heated tube (ResMed AirSense 11: 7 W off, 19 W humidifier, 55 W heated tube), DC converter vs AC (inverter idle draw about 15 W per BLUETTI, so AC humidifier-off nights are far lower than capacity ÷ watts), nights needed, UPS switchover times (DELTA 3 Plus and RIVER 3 Plus <10 ms; Jackery 1000 v2/2000 v2 and Anker C1000 <20 ms; RIVER 2 Pro <30 ms), ResMed Air11/Air10 DC converter current limits, auto-off timers, FAA 100 Wh flight limit, and maker medical-use caveats. Picks: DELTA 3 Plus, Jackery Explorer 1000 v2, BLUETTI AC180, RIVER 2 Pro, RIVER 3 Plus, Jackery Explorer 2000 v2, DELTA 2 Max.
 - [Best power station for camping](https://willitrunpower.com/best-power-station-for/camping/): For a carried campsite, the EcoFlow RIVER 2 (7.7 lb, 256 Wh) and Anker SOLIX C300 (288 Wh) cover a CPAP and lights; a Danby compact fridge pushes you toward the RIVER 2 Pro, DELTA 2, or AC180 if you can spare the weight.
@@ -43,8 +44,8 @@ Watt figures come from ResMed's published therapy-device power table and the Phi
 - [Will a power station run Philips DreamStation, worst case at the 80 W power supply rating?](https://willitrunpower.com/appliance/philips-dreamstation-max-rated/)
 
 ## Outages
-- [24-hour outage](https://willitrunpower.com/outage/24-hour/): EcoFlow DELTA 2 Max, EcoFlow DELTA Pro 3, BLUETTI AC200L, Jackery Explorer 2000 Plus, Jackery Explorer 2000 v2, Anker SOLIX F2000 (PowerHouse 767), Anker SOLIX F3800 have enough nameplate watt-hours, after the 85% allowance, for this 24-hour mix (1,608 Wh of load).
-- [3-day outage](https://willitrunpower.com/outage/3-day/): No base unit in this set stores enough for this mix. The load is 4,823 Wh, which needs about 5,675 Wh of nameplate capacity after the 85% allowance, and nothing here is that large without an extra battery.
+- [24-hour outage](https://willitrunpower.com/outage/24-hour/): only the EcoFlow DELTA Pro 3 and Anker SOLIX F3800 cover this 24-hour mix once about 15 W of inverter self-consumption is counted (1,608 Wh of appliances + 360 Wh idle = 1,968 Wh, about 2,315 Wh nameplate); the 2 kWh class is about 230 Wh short.
+- [3-day outage](https://willitrunpower.com/outage/3-day/): No base unit in this set stores enough for this mix. With about 1,080 Wh of inverter self-consumption added to 4,823 Wh of appliances, the three days take 5,903 Wh (about 6,945 Wh nameplate); nothing here is that large without extra batteries or a recharge.
 
 ## Comparisons
 - [EcoFlow DELTA 2 vs BLUETTI AC180](https://willitrunpower.com/vs/ecoflow-delta-2-vs-bluetti-ac180/)
