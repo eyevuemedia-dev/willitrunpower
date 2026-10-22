@@ -2,7 +2,7 @@
 
 > Willrun answers whether a specific portable power station or generator can run a specific appliance, using published running and starting watts, an 85% inverter allowance for stations, and 30 amp inlet math for home backup.
 
-Willrun is a static site. Every station and appliance row cites a manufacturer or ENERGY STAR URL. Runtime is nameplate watt-hours times 0.85, divided by average draw. The calculator, outage planners, brand comparison and CPAP/BiPAP pages also add about 15 W of inverter self-consumption (the figure BLUETTI uses for its AC180) to the draw: Wh × 0.85 ÷ (W + 15). CPAP pages show DC-converter nights separately as a best case. Verdicts are runs, runs with surge risk, won't run, or no run verdict when running watts were not published.
+Willrun is a static site. Every station and appliance row cites a manufacturer or ENERGY STAR URL. Runtime is nameplate watt-hours times 0.85, divided by average draw. The calculator, outage planners, brand comparison, CPAP/BiPAP pages, station and appliance runtime tables, and every station-and-appliance answer page (alongside the simple estimate) also add about 15 W of inverter self-consumption (the figure BLUETTI uses for its AC180) to the draw: Wh × 0.85 ÷ (W + 15). CPAP pages show DC-converter nights separately as a best case. Verdicts are runs, runs with surge risk, won't run, or no run verdict when running watts were not published.
 
 ## Start here
 - [Calculator](https://willitrunpower.com/): pick a station, add appliances, read the verdict.
