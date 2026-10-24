@@ -10,6 +10,8 @@ Willrun is a static site. Every station and appliance row cites a manufacturer o
 - [Stations](https://willitrunpower.com/stations/): 24 models.
 - [Appliances](https://willitrunpower.com/appliances/): 51 loads.
 - [Affiliate disclosure](https://willitrunpower.com/disclosure/)
+- [About Willrun](https://willitrunpower.com/about/): who publishes the site (EYEVUE Ventures), how the numbers are made, contact eyevueventures@gmail.com.
+- [Privacy policy](https://willitrunpower.com/privacy/): cookieless Cloudflare Web Analytics, no accounts or forms, affiliate cookies set only on the retailer's site, no sale of data. Effective 2026-10-24.
 
 ## Guides
 - [All guides (hub)](https://willitrunpower.com/guides/): index of generator sizing, generator vs power station, quiet generators, brand comparison and best-station-by-job guides.
