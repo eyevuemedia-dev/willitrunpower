@@ -50,7 +50,7 @@ Watt figures come from ResMed's published therapy-device power table and the Phi
 
 ## Outages
 - [24-hour outage](https://willitrunpower.com/outage/24-hour/): only the EcoFlow DELTA Pro 3 and Anker SOLIX F3800 cover this 24-hour mix once about 15 W of inverter self-consumption is counted (1,608 Wh of appliances + 360 Wh idle = 1,968 Wh, about 2,315 Wh nameplate); the 2 kWh class is about 230 Wh short.
-- [3-day outage](https://willitrunpower.com/outage/3-day/): No base unit in this set stores enough for this mix. With about 1,080 Wh of inverter self-consumption added to 4,823 Wh of appliances, the three days take 5,903 Wh (about 6,945 Wh nameplate); nothing here is that large without extra batteries or a recharge.
+- [3-day power outage backup plan](https://willitrunpower.com/outage/3-day/): A 3-day outage with a full-size fridge, CPAP, router, laptop and lights takes about 6,666 Wh including ~15 W inverter draw (about 7,840 Wh nameplate). Compares battery-only expandable systems (DELTA Pro 3, F3800 Plus, AC200L, Jackery 2000 Plus, DELTA 2 Max), solar with PVWatts monthly sun hours for six cities, and a generator-recharged battery (~1.4 gal over 3 days vs ~8.4 gal running an EU2200i 24/7). CDC CO and FoodSafety.gov guidance, medical note.
 
 ## Comparisons
 - [EcoFlow DELTA 2 vs BLUETTI AC180](https://willitrunpower.com/vs/ecoflow-delta-2-vs-bluetti-ac180/)
