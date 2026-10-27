@@ -11,7 +11,8 @@ Willrun is a static site. Every station and appliance row cites a manufacturer o
 - [Appliances](https://willitrunpower.com/appliances/): 51 loads.
 - [Affiliate disclosure](https://willitrunpower.com/disclosure/)
 - [About Willrun](https://willitrunpower.com/about/): who publishes the site (EYEVUE Ventures), how the numbers are made, contact eyevueventures@gmail.com.
-- [Privacy policy](https://willitrunpower.com/privacy/): cookieless Cloudflare Web Analytics, no accounts or forms, affiliate cookies set only on the retailer's site, no sale of data. Effective 2026-10-24.
+- [Privacy policy](https://willitrunpower.com/privacy/): cookieless Cloudflare Web Analytics, no accounts; an optional real-world test submission form (data + proof photo/link stored in Cloudflare, email optional and never published), affiliate cookies set only on the retailer's site, no sale of data. Effective 2026-10-27.
+- [Submit a real-world test](https://willitrunpower.com/submit-test/): readers send measured appliance/CPAP watts or runtime on a power station with a photo or proof link. Every entry is reviewed by hand; verified results are published as "Verified owner test" data.
 
 ## Guides
 - [All guides (hub)](https://willitrunpower.com/guides/): index of generator sizing, generator vs power station, quiet generators, brand comparison and best-station-by-job guides.
