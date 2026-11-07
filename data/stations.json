@@ -320,6 +320,26 @@
     "sourceNote": "US spec block: 45.6 Ah / 44.8 V DC (2,042 Wh), LiFePO4, 4,000 cycles to 70%+, around 39.5 lb, AC total 2,200 W rated and 4,400 W surge peak. Jackery's FAQ lists the same 4,400 W as maximum instantaneous output."
   },
   {
+    "slug": "jackery-homepower-1000-v2",
+    "brand": "Jackery",
+    "model": "HomePower 1000 v2",
+    "capacityWh": 1024,
+    "continuousW": 1500,
+    "surgeW": 3000,
+    "surgeAppliesToMotors": true,
+    "resistiveBoostW": null,
+    "boostName": null,
+    "chemistry": "LiFePO4",
+    "cycles": 6000,
+    "cyclesRetention": "70%+",
+    "weightLb": 23.4,
+    "dimensionsIn": "12.4 × 7.9 × 9.2",
+    "outlets": "3 AC outlets, 1,500 W rated. USB-C at 100 W and 30 W, USB-A at 18 W, and a 12 V/10 A car port.",
+    "launchPriceUsd": null,
+    "sourceUrl": "https://www.jackery.com/products/jackery-homepower-1000-v2",
+    "sourceNote": "Jackery product page + FAQ Basic Information (2026-11-07): 1,024 Wh LiFePO4, 6,000 cycles to ≥70%, 10.6 kg (23.4 lb), 31.4 × 20.1 × 23.4 cm, AC 1,500 W rated / 3,000 W instantaneous, UPS 10 ms, solar 400 W max on 2× DC8020, no battery pack. Maker shelf: black $559 (list $649)."
+  },
+  {
     "slug": "anker-solix-c300",
     "brand": "Anker SOLIX",
     "model": "C300",
