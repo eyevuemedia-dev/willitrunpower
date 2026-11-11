@@ -253,9 +253,10 @@ Capacity 2048 Wh, continuous 2400 W, motor surge not applied, resistive boost no
 Source: https://www.ankersolix.com/f2000
 Spec block for model A1780: 2,048 Wh, LFP, 3,000 cycles, AC output 2,400 W max. A separate surge rating and the weight were not in that spec block, so neither is used. A marketing line about 3,600 W was not in the spec table and is omitted.
 
-## Anker SOLIX F3800
+## Anker SOLIX F3800 / F3800 Plus
 
 Page: https://willitrunpower.com/station/anker-solix-f3800/
+Updated 2026-11-11: F3800 vs F3800 Plus guide. Anker's F3800 URL redirects to the F3800 Plus ($2,999.99, Sold Out 2026-11-11). Plus: 240/120 V generator bypass via Home Power Panel port (6,000 W at 240 V; 120 V generator TT-30R only, 3,000 W, 30/50 ms), solar 2x 11-165 V 17 A 1,600 W, TT-30R replaces 14-50R, 136.7 lb, 12 V 10 A car output, ~40 W AC idle (Anker FAQ). On 120 V wall charging: only 3 UPS 5-20R + TT-30R live, 1,440 W bypass, 20 ms, L14-30R off. Runtimes Wh x 0.85 / (W + 40): CPAP 56.1 W ~34 h, router 8.7 W ~2.8 days, fridge+freezer+router+CPAP 157 W ~16.5 h, with one BP3800 ~2x.
 Capacity 3840 Wh, continuous 6000 W, motor surge 9000 W, resistive boost none, LiFePO4, weight 132.3 lb.
 Source: https://www.ankersolix.com/products/f3800
 Tech specs: 3,840 Wh, LFP with 3,000+ cycles, 6,000 W continuous at 120 V and 240 V, 9,000 W AC surge, net weight 132.3 lb including the wheel dimension noted on the page.
