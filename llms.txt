@@ -69,7 +69,7 @@ Watt figures come from ResMed's published therapy-device power table and the Phi
 - [EcoFlow RIVER 2 vs Anker SOLIX C300](https://willitrunpower.com/vs/ecoflow-river-2-vs-anker-solix-c300/)
 - [EcoFlow RIVER 2 Pro vs BLUETTI AC70](https://willitrunpower.com/vs/ecoflow-river-2-pro-vs-bluetti-ac70/)
 - [Goal Zero Yeti 1500X vs EcoFlow DELTA 2 Max](https://willitrunpower.com/vs/goal-zero-yeti-1500x-vs-ecoflow-delta-2-max/)
-- [Anker SOLIX F3800 vs EcoFlow DELTA Pro 3](https://willitrunpower.com/vs/anker-solix-f3800-vs-ecoflow-delta-pro-3/)
+- [Anker F3800 Plus vs EcoFlow DELTA Pro 3](https://willitrunpower.com/vs/anker-solix-f3800-vs-ecoflow-delta-pro-3/): 6,000 W vs 4,000 W at 240 V; surge 37.5 A vs ~33.3 A at 240 V for well pumps; idle ~40 W (Anker) vs unpublished (15–50 W reported); 26.9 kWh vs ~12 kWh per unit; both sold out at makers 2026-11-12
 - [Jackery Explorer 2000 v2 vs Jackery Explorer 2000 Plus](https://willitrunpower.com/vs/jackery-explorer-2000-v2-vs-jackery-explorer-2000-plus/)
 
 ## Data

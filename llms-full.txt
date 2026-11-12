@@ -42,7 +42,7 @@ Willrun is a static site. Every station and appliance row cites a manufacturer o
 - [EcoFlow RIVER 2 vs Anker SOLIX C300](https://willitrunpower.com/vs/ecoflow-river-2-vs-anker-solix-c300/)
 - [EcoFlow RIVER 2 Pro vs BLUETTI AC70](https://willitrunpower.com/vs/ecoflow-river-2-pro-vs-bluetti-ac70/)
 - [Goal Zero Yeti 1500X vs EcoFlow DELTA 2 Max](https://willitrunpower.com/vs/goal-zero-yeti-1500x-vs-ecoflow-delta-2-max/)
-- [Anker SOLIX F3800 vs EcoFlow DELTA Pro 3](https://willitrunpower.com/vs/anker-solix-f3800-vs-ecoflow-delta-pro-3/)
+- [Anker F3800 Plus vs EcoFlow DELTA Pro 3](https://willitrunpower.com/vs/anker-solix-f3800-vs-ecoflow-delta-pro-3/): 6,000 W vs 4,000 W at 240 V; surge 37.5 A vs ~33.3 A at 240 V for well pumps; idle ~40 W (Anker) vs unpublished (15–50 W reported); 26.9 kWh vs ~12 kWh per unit; both sold out at makers 2026-11-12
 - [Jackery Explorer 2000 v2 vs Jackery Explorer 2000 Plus](https://willitrunpower.com/vs/jackery-explorer-2000-v2-vs-jackery-explorer-2000-plus/)
 
 ## Data
@@ -688,3 +688,11 @@ URL: https://willitrunpower.com/best-power-station-for/well-pump/
 - All F3800 AC runtimes (17 answer pages, 51 appliance pages, station table, CPAP hub / outage / camping / BiPAP tables, fridge, oxygen and home-backup guide rows) now use about 40 W idle instead of 15 W, per Anker's F3800 Plus FAQ ("With AC on and no devices connected, F3800 Plus consumes about 40W"; idle discharge ~95 h). Formula: 3,264 Wh ÷ (load W + 40).
 - Examples: AirSense 11 typical 56.1 W 45.9 → 34.0 h; AirSense 11 no humidifier 6.2 → 2.9 days on AC; router 8.7 W 5.7 → 2.8 days; median top-freezer fridge 58 → 40 h.
 - Data fix: the F3800 and F3800 Plus both have a 12 V ⎓ 10 A car charger output (Anker US user guide A1790; F3800 Plus tech specs). DC best case with a ResMed Air11/AirMini/Air10 (no humidifier) converter is now shown: AirSense 11 no humidifier 19.4 days (58.3 nights), AirSense 11 typical 2.4 days.
+
+# Anker F3800 Plus vs EcoFlow DELTA Pro 3 (head-to-head guide, 2026-11-12)
+URL: https://willitrunpower.com/vs/anker-solix-f3800-vs-ecoflow-delta-pro-3/
+- Output 6,000 W (L14-30R 25 A) vs 4,000 W (L14-30R + 6-20R 16.7 A; 6,000 W X-Boost resistive only). DP3 is 120 V or 240 V mode, not both; F3800 Plus loses 240 V while charging from a 120 V wall outlet.
+- Surge at 240 V: F3800 37.5 A (original F3800 9,000 W) vs DP3 ~33.3 A. Franklin 3/4 HP 3-wire (34.2 A LRA): F3800 thin margin, DP3 borderline; 1 HP: neither with margin.
+- Idle: F3800 Plus ~40 W (Anker FAQ); DP3 unpublished (I'mTech ~15–18 W; owners 30–50 W). AirSense 11 typical 56.1 W: F3800 ~34 h; DP3 ~36–49 h. F3800 12 V car socket (10 A) lets a ResMed DC converter skip inverter idle; DP3 12 V is Anderson 30 A + DC5521 (no car socket listed).
+- Expansion: F3800 Plus 6 × BP3800 = 26,880 Wh per unit; DP3 2 extra batteries ≈ 12 kWh per unit (36 kWh on 3 units + Smart Home Panel 2). UPS 20 ms vs 10 ms. 136.7 lb vs 113.54 lb.
+- Prices 2026-11-12: F3800 Plus $2,999.99 Sold Out (Anker US); DP3 $2,799 (compare-at $3,299) Sold Out (EcoFlow US).
