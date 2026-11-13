@@ -14,7 +14,7 @@
     "cyclesRetention": "80%+",
     "weightLb": 7.7,
     "dimensionsIn": "9.6 × 8.5 × 5.7",
-    "outlets": "2 AC outlets, 300 W shared. The comparison also describes USB-A, USB-C, and DC ports without a port count.",
+    "outlets": "2 AC outlets, 300 W shared. The comparison also describes USB-A, USB-C, and DC ports without a port count. 1 car output, 12.6 V 8 A, 100 W max (EcoFlow RIVER 2 user manual).",
     "launchPriceUsd": null,
     "sourceUrl": "https://www.ecoflow.com/us/blog/ecoflow-river-series-comparison-features-specs-applications",
     "sourceNote": "US/CA comparison table: 256 Wh, 2 AC outlets at 300 W, X-Boost 600 W, 7.7 lb, LiFePO4, 3,000 cycles to 80%+. EcoFlow describes the 600 W figure as surge with X-Boost. Willrun treats it as a resistive boost, not motor-start capacity. The manual language for X-Boost says it suits heating devices."
@@ -52,7 +52,7 @@
     "chemistry": "LiFePO4",
     "cycles": 3000,
     "cyclesRetention": "80%+",
-    "weightLb":18.2,
+    "weightLb": 18.2,
     "dimensionsIn": "10.6 × 10.2 × 8.9",
     "outlets": "4 AC outlets, 800 W shared, plus USB-A, USB-C (100 W), and 12.6 V DC ports.",
     "launchPriceUsd": null,
@@ -74,7 +74,7 @@
     "cyclesRetention": "80%",
     "weightLb": 10.4,
     "dimensionsIn": "9.2 × 9.1 × 5.8",
-    "outlets": "3 AC outlets, 600 W shared. 2 USB-A ports at 12 W each and 1 USB-C port at 100 W.",
+    "outlets": "3 AC outlets, 600 W shared. 2 USB-A ports at 12 W each and 1 USB-C port at 100 W. 1 car output, 12.6 V 10 A, 126 W max (EcoFlow RIVER 3 Plus spec sheet).",
     "launchPriceUsd": null,
     "sourceUrl": "https://us.ecoflow.com/products/river-3-plus-portable-power-station",
     "sourceNote": "Spec table: 286 Wh, 3 outlets, 600 W total (surge 1,200 W, X-Boost 1,200 W), 10.4 lb, LiFePO4, 3,000 cycles to 80%. Page copy says X-Boost continuously handles 1,200 W heating devices. The shelf price on that page was not used; launch price was not stated."
@@ -174,7 +174,7 @@
     "cyclesRetention": "80%",
     "weightLb": 113.54,
     "dimensionsIn": "16.16 × 13.43 × 27.28",
-    "outlets": "120/240 V, 4,000 W total. 4× NEMA 5-20R, 1× NEMA TT-30R, 1× NEMA 6-20R, 1× NEMA L14-30R. USB-C 2×100 W and USB-A ports. A DC wattage line on the page was garbled and is omitted.",
+    "outlets": "120/240 V, 4,000 W total. 4× NEMA 5-20R, 1× NEMA TT-30R, 1× NEMA 6-20R, 1× NEMA L14-30R. USB-C 2×100 W and USB-A ports. 12 V DC: 1 Anderson (30 A) and 1 DC5521 (5 A), 12.6 V 378 W total; no car socket.",
     "launchPriceUsd": null,
     "sourceUrl": "https://us.ecoflow.com/products/delta-pro-3-portable-power-station",
     "sourceNote": "US spec block: 4,096 Wh, AC continuous 4,000 W and 6,000 W with X-Boost, AC surge 8,000 W, 51.5 kg (113.54 lb), LFP, 4,000 cycles to 80%."
@@ -354,7 +354,7 @@
     "cyclesRetention": null,
     "weightLb": null,
     "dimensionsIn": null,
-    "outlets": "AC outlets rated 300 W. USB-C and USB-A ports are described; the AC outlet count, weight, and cycle count are not in the spec text on the product page.",
+    "outlets": "AC outlets rated 300 W. USB-C and USB-A ports are described; the AC outlet count, weight, and cycle count are not in the spec text on the product page. 1 car socket, 12 V 10 A (Anker user guide A1722).",
     "launchPriceUsd": null,
     "sourceUrl": "https://www.ankersolix.com/products/c300",
     "sourceNote": "Product page: 288 Wh and 300 W, with 600 W surge in the headline. The FAQ says the AC outlets deliver 300 W rated and 600 W with SurgePad. Willrun treats 600 W as SurgePad, not a separate motor-start rating. Weight and cycle life were not in that text."

@@ -665,7 +665,7 @@ URL: https://willitrunpower.com/best-power-station-for/oxygen-concentrator/
 
 # Power station for an insulin fridge (outage guide, 2026-10-28)
 URL: https://willitrunpower.com/best-power-station-for/insulin-fridge/
-- DC hours on Dometic CFX3 25 (11.04 W): Anker C800 / BLUETTI AC70 59; Jackery 1000 v2 82; Anker C1000 81; DELTA 3 Plus 79; Jackery 2000 Plus 157; DELTA 2 Max 158. RIVER 3 Plus lists no car outlet.
+- DC hours on Dometic CFX3 25 (11.04 W): Anker C800 / BLUETTI AC70 59; Jackery 1000 v2 82; Anker C1000 81; DELTA 3 Plus 79; Jackery 2000 Plus 157; DELTA 2 Max 158; RIVER 3 Plus 22 (126 W car outlet).
 - AC hours, Danby 3.2 cu ft (24.9 W + 15) / 1.0 cu ft (27.5 W + 15): Jackery 1000 v2 23/21; Jackery 2000 Plus 44/41.
 - 3-day need: cooler ~935 Wh; compact fridge ~3,380-3,600 Wh. 7-day cooler ~2,182 Wh.
 
@@ -696,3 +696,6 @@ URL: https://willitrunpower.com/vs/anker-solix-f3800-vs-ecoflow-delta-pro-3/
 - Idle: F3800 Plus ~40 W (Anker FAQ); DP3 unpublished (I'mTech ~15–18 W; owners 30–50 W). AirSense 11 typical 56.1 W: F3800 ~34 h; DP3 ~36–49 h. F3800 12 V car socket (10 A) lets a ResMed DC converter skip inverter idle; DP3 12 V is Anderson 30 A + DC5521 (no car socket listed).
 - Expansion: F3800 Plus 6 × BP3800 = 26,880 Wh per unit; DP3 2 extra batteries ≈ 12 kWh per unit (36 kWh on 3 units + Smart Home Panel 2). UPS 20 ms vs 10 ms. 136.7 lb vs 113.54 lb.
 - Prices 2026-11-12: F3800 Plus $2,999.99 Sold Out (Anker US); DP3 $2,799 (compare-at $3,299) Sold Out (EcoFlow US).
+
+# DC (car-port) corrections, 2026-11-13
+- EcoFlow RIVER 2 (12.6 V 8 A, 100 W max), RIVER 3 Plus (12.6 V 10 A, 126 W max) and Anker SOLIX C300 (12 V 10 A) have 12 V car outputs per maker manuals/spec sheets, so CPAP pages now show DC best cases (e.g. AirSense 11 humidifier-off ~3.9/4.3/4.4 nights). EcoFlow DELTA Pro 3 has 12 V Anderson (30 A) and DC5521 outputs but no car socket; CPAP pages keep it AC-only.
