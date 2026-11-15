@@ -699,3 +699,13 @@ URL: https://willitrunpower.com/vs/anker-solix-f3800-vs-ecoflow-delta-pro-3/
 
 # DC (car-port) corrections, 2026-11-13
 - EcoFlow RIVER 2 (12.6 V 8 A, 100 W max), RIVER 3 Plus (12.6 V 10 A, 126 W max) and Anker SOLIX C300 (12 V 10 A) have 12 V car outputs per maker manuals/spec sheets, so CPAP pages now show DC best cases (e.g. AirSense 11 humidifier-off ~3.9/4.3/4.4 nights). EcoFlow DELTA Pro 3 has 12 V Anderson (30 A) and DC5521 outputs but no car socket; CPAP pages keep it AC-only.
+
+## DELTA 2 Max vs Explorer 2000 Plus (updated 2026-11-15) <!-- d2mvs1115 -->
+https://willitrunpower.com/vs/ecoflow-delta-2-max-vs-jackery-explorer-2000-plus/
+- Capacity tie: DELTA 2 Max 2,048 Wh (1,741 usable at ×0.85), Explorer 2000 Plus 2,042.8 Wh (1,736), HomePower 2000 Plus v2 2,048 Wh.
+- Output: 2,400 W / 4,800 W surge (X-Boost 3,400 W resistive only) vs 3,000 W / 6,000 W with TT-30R 30 A; v2 2,400 W / 4,800 W.
+- Idle: DELTA 2 Max 23 W AC on / 5 W AC off (EcoFlow support via diglloyd), ~13.6 W measured (The Solar Lab); Explorer 2000 Plus 25 W, v2 <=16 W (Jackery Basic Information tables, 2026-08-20).
+- Switchover: within 30 ms (DELTA 2 Max manual), 20 ms EPS (2000 Plus), 10 ms (v2).
+- Expansion: DELTA 2 Max 6,144 Wh; 2000 Plus ~12 kWh + parallel; v2 ~12 kWh, no parallel, Battery Pack 2000 Plus not compatible.
+- Status 2026-11-15: Jackery US 301-redirects the Explorer 2000 Plus URL to the HomePower 2000 Plus v2 ($1,199, sold out, pre-order ships Nov 30); DELTA 2 Max $1,029 (compare-at $1,299) in stock at EcoFlow US.
+- Medical: estimates only; confirm power sources with the device maker and clinician.

@@ -63,7 +63,7 @@ Watt figures come from ResMed's published therapy-device power table and the Phi
 - [EcoFlow DELTA 2 vs Jackery Explorer 1000 v2](https://willitrunpower.com/vs/ecoflow-delta-2-vs-jackery-explorer-1000-v2/)
 - [EcoFlow DELTA 2 vs Anker SOLIX C1000](https://willitrunpower.com/vs/ecoflow-delta-2-vs-anker-solix-c1000/)
 - [EcoFlow DELTA 3 Plus vs EcoFlow DELTA 2](https://willitrunpower.com/vs/ecoflow-delta-3-plus-vs-ecoflow-delta-2/)
-- [EcoFlow DELTA 2 Max vs Jackery Explorer 2000 Plus](https://willitrunpower.com/vs/ecoflow-delta-2-max-vs-jackery-explorer-2000-plus/)
+- [EcoFlow DELTA 2 Max vs Jackery Explorer 2000 Plus](https://willitrunpower.com/vs/ecoflow-delta-2-max-vs-jackery-explorer-2000-plus/): updated 2026-11-15: ~3,700-word decision guide. Same ~2,045 Wh; 2,400 W vs 3,000 W + TT-30R; idle 23 W AC on / 5 W off (EcoFlow support) or ~13.6 W measured vs 25 W (Jackery FAQ); 30 ms vs 20 ms switchover; 6,144 Wh vs ~12 kWh expansion; Jackery US now redirects the 2000 Plus to the HomePower 2000 Plus v2 (2,400 W, ≤16 W standby, 10 ms, no parallel, packs not compatible); DELTA 2 Max $1,029 in stock, v2 $1,199 pre-order (2026-11-15)
 - [EcoFlow DELTA 2 Max vs Anker SOLIX F2000 (PowerHouse 767)](https://willitrunpower.com/vs/ecoflow-delta-2-max-vs-anker-solix-f2000/)
 - [Jackery Explorer 1000 Plus vs Anker SOLIX C1000](https://willitrunpower.com/vs/jackery-explorer-1000-plus-vs-anker-solix-c1000/)
 - [EcoFlow RIVER 2 vs Anker SOLIX C300](https://willitrunpower.com/vs/ecoflow-river-2-vs-anker-solix-c300/)
