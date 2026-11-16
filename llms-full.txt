@@ -709,3 +709,13 @@ https://willitrunpower.com/vs/ecoflow-delta-2-max-vs-jackery-explorer-2000-plus/
 - Expansion: DELTA 2 Max 6,144 Wh; 2000 Plus ~12 kWh + parallel; v2 ~12 kWh, no parallel, Battery Pack 2000 Plus not compatible.
 - Status 2026-11-15: Jackery US 301-redirects the Explorer 2000 Plus URL to the HomePower 2000 Plus v2 ($1,199, sold out, pre-order ships Nov 30); DELTA 2 Max $1,029 (compare-at $1,299) in stock at EcoFlow US.
 - Medical: estimates only; confirm power sources with the device maker and clinician.
+
+## CPAP on DC vs AC (updated 2026-11-16) <!-- dcac1116 -->
+https://willitrunpower.com/cpap-dc-vs-ac-power-station/
+- AC nights = Wh x 0.85 / ((CPAP W + inverter idle W) x 8); DC best case = Wh x 0.85 / (CPAP W x 8).
+- 1,024 Wh, AirSense 11: no humidifier 4.9 AC vs 15.5 DC (3.1x); HumidAir 3.2 vs 5.7 (1.8x); heated tube 1.6 vs 2.0 (1.3x).
+- Idle sources: BLUETTI AC180 ~15 W (runtime formula); DELTA 3 Plus ~17.5 W (owner test); DELTA 2 Max 23 W AC on / 5 W AC off (EcoFlow support via diglloyd), ~13.6 W measured (The Solar Lab); Explorer 2000 Plus 25 W; HomePower 1000 v2 and 2000 Plus v2 <=16 W (Jackery FAQ); DELTA Pro 3 ~15-18 W (230 V unit, I'mTech); F3800 Plus ~40 W (Anker FAQ).
+- DELTA 2 Max, AirSense 11 no humidifier: 7.3 nights AC on, 18.1 nights DC with AC off (5 W standby), 31.1 best case.
+- Converters: Air11 12/24 V 10/5 A in, 24 V 3.75 A out, supports HumidAir + ClimateLineAir; Air10 (AirSense 10/AirCurve 10/Lumis) 13/6.5 A in, 51 W typical, 106 W peak; AirMini 8/4 A in, 24 V 2.71 A out. Philips: Philips DC cord only, not with engine running; DreamStation 2 humidifier needs 80 W supply.
+- AC is better for bedside UPS (switchover times are published for AC only), Philips humidification, Air10 humidity on 10 A ports, or ports that cut out.
+- Medical: estimates only; confirm power sources with the device maker and clinician.
