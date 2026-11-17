@@ -719,3 +719,14 @@ https://willitrunpower.com/cpap-dc-vs-ac-power-station/
 - Converters: Air11 12/24 V 10/5 A in, 24 V 3.75 A out, supports HumidAir + ClimateLineAir; Air10 (AirSense 10/AirCurve 10/Lumis) 13/6.5 A in, 51 W typical, 106 W peak; AirMini 8/4 A in, 24 V 2.71 A out. Philips: Philips DC cord only, not with engine running; DreamStation 2 humidifier needs 80 W supply.
 - AC is better for bedside UPS (switchover times are published for AC only), Philips humidification, Air10 humidity on 10 A ports, or ports that cut out.
 - Medical: estimates only; confirm power sources with the device maker and clinician.
+
+## Can a car battery run a CPAP? (updated 2026-11-17) <!-- carbatt1117 -->
+https://willitrunpower.com/can-a-car-battery-run-a-cpap/
+- Ah per 8 h night at 12 V = W x 8 / 0.85 / 12: AirSense 11 no humidifier (7 W) 5.5 Ah; HumidAir (19 W) 14.9 Ah; heated tube (55 W) 43.1 Ah. ResMed power table.
+- Labels: CCA = 30-second cranking (East Penn); use C20 Ah or reserve capacity (minutes at 25 A to 10.5 V, 80 F). Optima REDTOP 35: 44 Ah, 90 min RC, starting only; BLUETOP D34M: 55 Ah, 120 min, dual purpose; Battle Born BB10012: 100 Ah LiFePO4, 100% DoD, 10 V BMS cutoff.
+- Planning drain: starting battery you need tomorrow >=75% SOC (East Penn/Deka and Crown recharge-below-75% test rule; our planning line); emergency 50%; dual-purpose AGM 50%; LiFePO4 up to 100% (80% margin row).
+- Resting OCV (East Penn/Deka): flooded 12.6-12.7 / 12.4 / 12.2 / 12.0 / 11.8 V; AGM 12.8+ / 12.6 / 12.3 / 12.0 / 11.8 V for 100/75/50/25/0%.
+- Nights (DC, 0.85): 44 Ah at 25% 2.0 / 0.7 / 0.3 (no humid / HumidAir / heated tube); 44 Ah at 50% 4.0 / 1.5 / 0.5; 55 Ah AGM 50% 5.0 / 1.8 / 0.6; 100 Ah LiFePO4 100% 19.4 / 7.2 / 2.5; Pilot-24 Lite 95 Wh 1.4 (maker 1-2 nights humidifier off); 1,024 Wh station 15.5 / 5.7 / 2.0. Via 15 W inverter, humidifier off: 0.6 / 1.3 / 1.6 / 6.2.
+- Safety: Philips DreamStation 2 / BiPAP: do not run from a vehicle battery with the engine running, Philips DC cord only. ResMed Air10 converter guide: deep-cycle battery recommended, negative-ground only. CDC: never run a vehicle in an attached garage, even with the door open.
+- Recharge: add 8-15% for charge losses; full charge ~3.5 h longer than simple math (East Penn/Deka).
+- Medical: estimates only; confirm power sources with the device maker and clinician.
