@@ -35,7 +35,7 @@ Willrun is a static site. Every station and appliance row cites a manufacturer o
 - [EcoFlow DELTA 2 vs BLUETTI AC180](https://willitrunpower.com/vs/ecoflow-delta-2-vs-bluetti-ac180/)
 - [EcoFlow DELTA 2 vs Jackery Explorer 1000 v2](https://willitrunpower.com/vs/ecoflow-delta-2-vs-jackery-explorer-1000-v2/)
 - [EcoFlow DELTA 2 vs Anker SOLIX C1000](https://willitrunpower.com/vs/ecoflow-delta-2-vs-anker-solix-c1000/)
-- [EcoFlow DELTA 3 Plus vs EcoFlow DELTA 2](https://willitrunpower.com/vs/ecoflow-delta-3-plus-vs-ecoflow-delta-2/)
+- [EcoFlow DELTA 3 Plus vs DELTA 2 (and DELTA 3)](https://willitrunpower.com/vs/ecoflow-delta-3-plus-vs-ecoflow-delta-2/): updated 2026-11-17. All 1,024 Wh / 1,800 W LFP. DELTA 3 Plus: <10 ms UPS, 3,600 W surge, 1,500 W AC (56 min), 2 x 500 W solar, 140 W USB-C, 5 kWh expansion (accepts DELTA 2 Extra Battery via XT150 cable), 4,000 cycles; $719 at EcoFlow US 11-17. DELTA 3: same but 1 x 500 W solar, 100 W USB-C; $579. DELTA 2 (US manual): 30 ms "basic UPS", 2,700 W surge at 120 V, 1,200 W AC, 500 W solar, 1 extra battery (1-3 kWh), 3,000 cycles; EcoFlow US product link now redirects to DELTA 3. Pick: Plus for solar/140 W USB-C, DELTA 3 for plain backup, DELTA 2 only below $579.
 - [EcoFlow DELTA 2 Max vs Jackery Explorer 2000 Plus](https://willitrunpower.com/vs/ecoflow-delta-2-max-vs-jackery-explorer-2000-plus/)
 - [EcoFlow DELTA 2 Max vs Anker SOLIX F2000 (PowerHouse 767)](https://willitrunpower.com/vs/ecoflow-delta-2-max-vs-anker-solix-f2000/)
 - [Jackery Explorer 1000 Plus vs Anker SOLIX C1000](https://willitrunpower.com/vs/jackery-explorer-1000-plus-vs-anker-solix-c1000/)
@@ -92,7 +92,7 @@ A published surge is used for motors only when the maker states it separately fr
 
 Microwaves and induction cooktops are electronics. They are not boost-eligible. A fan, a fridge, a window air conditioner, a dehumidifier, and a pump are not boost-eligible either.
 
-EcoFlow's RIVER 2, RIVER 2 Max, RIVER 2 Pro, and RIVER 3 Plus publish a surge figure that is the same as X-Boost and is described for heating devices, so it is not used as motor-start capacity. The DELTA 2's 2,700 W surge appears on a 230 V manual line and is not used for the 120 V model. BLUETTI's AC180 lists a 2,700 W surge that the FAQ treats as Power Lifting and tells owners not to use for an air conditioner or a washer, so it is not used for motors. The AC70's 1,500 W surge is kept for motors; its 2,000 W lifting mode is resistive only. Anker's C300 headline surge matches the FAQ's SurgePad description, so it is a boost. The Goal Zero Yeti 1000X page disagrees with itself on surge (3,000 W and 3,500 W), so surge is omitted.
+EcoFlow's RIVER 2, RIVER 2 Max, RIVER 2 Pro, and RIVER 3 Plus publish a surge figure that is the same as X-Boost and is described for heating devices, so it is not used as motor-start capacity. The DELTA 2's US manual lists 1,800 W (surge 2,700 W) at 120 V, so that surge is used for motors when the appliance publishes startup watts (corrected 2026-11-17). BLUETTI's AC180 lists a 2,700 W surge that the FAQ treats as Power Lifting and tells owners not to use for an air conditioner or a washer, so it is not used for motors. The AC70's 1,500 W surge is kept for motors; its 2,000 W lifting mode is resistive only. Anker's C300 headline surge matches the FAQ's SurgePad description, so it is a boost. The Goal Zero Yeti 1000X page disagrees with itself on surge (3,000 W and 3,500 W), so surge is omitted.
 
 ## What was left out
 
@@ -139,7 +139,7 @@ Spec table: 286 Wh, 3 outlets, 600 W total (surge 1,200 W, X-Boost 1,200 W), 10.
 Page: https://willitrunpower.com/station/ecoflow-delta-2/
 Capacity 1024 Wh, continuous 1800 W, motor surge not applied, resistive boost X-Boost 2200 W, LiFePO4, weight 27 lb.
 Source: https://www.ecoflow.com/us/delta-2-portable-power-station
-US product page: about 1 kWh, 1,800 W output, X-Boost up to 2,200 W, LiFePO4, 3,000+ cycles. Weight, size, and the 4 AC outlets are from the EcoFlow DELTA 2 user manual. The manual line that pairs 1,800 W with a 2,700 W surge is printed next to 230 V, so that surge is not used for this 120 V entry.
+US product page: about 1 kWh, 1,800 W output, X-Boost up to 2,200 W, LiFePO4, 3,000+ cycles. Weight, size, the 6 AC outlets and the 120 V rating of 1,800 W (surge 2,700 W) are from EcoFlow's US DELTA 2 user manual (V1.0). Corrected 2026-11-17: this entry earlier read the 2,700 W surge as a 230 V figure and listed 4 AC outlets.
 
 ## EcoFlow DELTA 2 Max
 
@@ -730,3 +730,6 @@ https://willitrunpower.com/can-a-car-battery-run-a-cpap/
 - Safety: Philips DreamStation 2 / BiPAP: do not run from a vehicle battery with the engine running, Philips DC cord only. ResMed Air10 converter guide: deep-cycle battery recommended, negative-ground only. CDC: never run a vehicle in an attached garage, even with the door open.
 - Recharge: add 8-15% for charge losses; full charge ~3.5 h longer than simple math (East Penn/Deka).
 - Medical: estimates only; confirm power sources with the device maker and clinician.
+
+## DELTA 2 spec correction (2026-11-17) <!-- d3pvs1117 -->
+EcoFlow's US DELTA 2 user manual V1.0 lists AC (x6), pure sine 1,800 W total (surge 2,700 W) at 120 V, 15 outputs, 1,200 W AC input, 500 W solar, EPS within 30 ms. Willrun earlier listed 4 AC outlets and treated the 2,700 W surge as a 230 V figure; both corrected on the station page, 22 DELTA 2 matchups, 4 vs pages, methodology and the calculator data. No verdict changed: every DELTA 2 motor matchup lacks published appliance startup watts.

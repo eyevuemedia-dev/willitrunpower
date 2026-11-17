@@ -94,10 +94,10 @@
     "cyclesRetention": "80%",
     "weightLb": 27,
     "dimensionsIn": "15.7 × 8.3 × 11.1",
-    "outlets": "4 AC outlets, 2 USB-C at 100 W, USB-A ports, a car outlet, and 2 DC5521 ports, from the user manual.",
+    "outlets": "6 AC outlets (1,800 W total), 2 USB-C at 100 W, 4 USB-A (2 fast-charge), a 12.6 V 10 A car outlet and 2 DC5521 ports: 15 outputs, from the US user manual.",
     "launchPriceUsd": null,
-    "sourceUrl": "https://www.ecoflow.com/us/delta-2-portable-power-station",
-    "sourceNote": "US product page: about 1 kWh, 1,800 W output, X-Boost up to 2,200 W, LiFePO4, 3,000+ cycles. Weight, size, and the 4 AC outlets are from the EcoFlow DELTA 2 user manual. The manual line that pairs 1,800 W with a 2,700 W surge is printed next to 230 V, so that surge is not used for this 120 V entry."
+    "sourceUrl": "https://websiteoss.ecoflow.com/cms/upload/2022/12/13/EcoFlow%20DELTA%202-User%20manual%20V1.0%20%28EN%29_1670906417941.pdf",
+    "sourceNote": "US product page: about 1 kWh, 1,800 W output, X-Boost up to 2,200 W, LiFePO4, 3,000+ cycles. Weight, size, the 6 AC outlets and the 120 V rating of 1,800 W (surge 2,700 W) are from EcoFlow's US DELTA 2 user manual (V1.0). Corrected 2026-11-17: this entry earlier read the 2,700 W surge as a 230 V figure and listed 4 AC outlets."
   },
   {
     "slug": "ecoflow-delta-2-max",
