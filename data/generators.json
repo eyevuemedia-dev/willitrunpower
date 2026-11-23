@@ -293,11 +293,12 @@
   "runtime": "11 hr at 25% load",
   "noiseDb": "56 dBA at 25% load",
   "weightLb": null,
-  "outlets": "120VAC 25A total, 12VDC 8A",
-  "outlet30": null,
+  "outlets": "Two 120V 20A (5-20R), one 120V 30A twist-lock (L5-30R), 12VDC 8A; 120VAC 25A total",
+  "outlet30": "L5-30R",
   "coSensor": "CO SECURE",
   "sourceUrl": "https://www.harborfreight.com/3500-watt-super-quiet-inverter-generator-with-co-secure-technology-49-state-compliant-71358.html",
-  "sourceNote": "Harbor Freight (71358): 3000 running / 3500 starting; 212cc; 120VAC 25A and 12VDC 8A; 56 dBA at 25%; 11 hr at 25%; 2.64 gal (older 59137: 2.33 gal). Receptacle types not verified, so no 30A outlet is credited."
+  "sourceNote": "Harbor Freight (71358) manual and product page: 3000 running / 3500 starting; 212cc; 120VAC 25A; receptacles 2 x NEMA 5-20, 1 x NEMA L5-30 (120V), 12VDC 8A; neutral isolated from frame; 56 dBA at 23 ft, 25%; 11 hr at 25%; 2.64 gal (older 59137: 2.33 gal); 30A RV adapter included.",
+  "manualUrl": "https://manuals.harborfreight.com/manuals/71000-71999/71358-193175546272.pdf"
  },
  {
   "slug": "predator-9500",
