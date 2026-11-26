@@ -92,11 +92,11 @@
   "runtime": "11.5 hr at 1/4 load",
   "noiseDb": "53 dBA from 23 ft",
   "weightLb": 39,
-  "outlets": "120V 20A household outlets",
+  "outlets": "Two 120V 20A (5-20R), 12V DC 8A, parallel outlets",
   "outlet30": null,
   "coSensor": null,
   "sourceUrl": "https://www.championpowerequipment.com/wp-content/uploads/2020/11/200951-om-english.pdf",
-  "sourceNote": "Champion operator's manual and sell sheet: 2500 starting / 1850 running, 79cc, 1.1 gal, 11.5 hr at 25% load, 39 lb. Outlet detail beyond 120V household outlets not verified."
+  "sourceNote": "Champion operator's manual and sell sheet: 2500 starting / 1850 running, 79cc, 1.1 gal, 11.5 hr at 25% load, 39 lb. Outlets from the manual's control panel page (p. 13): two 120V 20A NEMA 5-20R, one 12V DC 8A regulated automotive outlet, and parallel outlets; no 30A outlet."
  },
  {
   "slug": "champion-100891",
