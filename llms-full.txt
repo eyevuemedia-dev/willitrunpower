@@ -318,6 +318,7 @@ Page: https://willitrunpower.com/appliance/samsung-rt18dg6300/
 Category Refrigeration. Running not published W. Peak not published W. Average 38 W. Duty cycle none.
 Source: https://data.energystar.gov/d/p5st-her9
 ENERGY STAR lists 333 kWh/year for RT18DG6300**, a 17.5 cu ft top freezer with no ice maker. Average draw is 333 × 1,000 ÷ 8,760 = 38.0 W. Compressor running watts and startup watts are not in the listing, so Willrun will not issue a runs or won't-run verdict.
+Outage sizing (2026-11-27, fa-1127): Samsung spec sheet 115 V / 60 Hz / 3.5 A, Digital Inverter Compressor; lowest of 350 certified 16.5-18.5 cu ft top-freezers (median 366 kWh/yr). About 17 h on 1 kWh and 33 h on 2 kWh stations with a published motor surge >= 1,200 W; 3 days about 4,491 Wh nameplate.
 
 ## Whirlpool WZC3209LW 9 cu ft chest freezer
 
@@ -339,6 +340,7 @@ Page: https://willitrunpower.com/appliance/frigidaire-fffh20f3w/
 Category Refrigeration. Running not published W. Peak not published W. Average 54.6 W. Duty cycle none.
 Source: https://data.energystar.gov/d/8t9c-g3tn
 ENERGY STAR lists 478 kWh/year for FFFH20F3W*, a 20.0 cu ft upright freezer. Average draw is 54.6 W. Running and startup watts are not in the listing, so there is no run verdict.
+Outage plan (2026-11-27, fa-1127): Frigidaire lists 115 V, 15 A minimum circuit, door-ajar and high-temp alarms; no running/start watts. USDA FSIS: full freezer holds about 48 h (24 h half full), so the fridge gets the battery first. About 25 h on a 2 kWh station; fridge + freezer about 2,665 Wh/day; 50 lb dry ice keeps a full 18 cu ft freezer cold for 2 days.
 
 ## BLACK+DECKER BDM05C 5,000 Btu/h window air conditioner
 
