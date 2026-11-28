@@ -311,6 +311,7 @@ Page: https://willitrunpower.com/appliance/danby-dar010a1bdb/
 Category Refrigeration. Running 90 W. Peak not published W. Average 27.5 W. Duty cycle 0.306.
 Source: https://www.danby.com/products/compact-refrigerators/dar010a1bdb/
 Danby lists 115 V, 90 W, and 241 kWh/year. Average draw is 27.5 W. Duty cycle 0.306 is the annual average implied by those two figures. Startup watts are not published.
+Runtime (2026-11-28, cc-1128): with 15 W inverter idle (35% of the load) about 21 h on a 1,070 Wh station and 41 h on 2,048 Wh; a 12 V compressor cooler (about 11 W) lasts about 82 h on 1,070 Wh. Newer DAR010A2BDB rated 187 kWh/yr. Danby manual: not for vehicles or garages; wait 3-5 minutes before restarting.
 
 ## Samsung RT18DG6300 17.5 cu ft top-freezer refrigerator
 
@@ -326,6 +327,7 @@ Page: https://willitrunpower.com/appliance/whirlpool-wzc3209lw/
 Category Refrigeration. Running not published W. Peak not published W. Average 22.9 W. Duty cycle none.
 Source: https://data.energystar.gov/d/8t9c-g3tn
 ENERGY STAR lists 201 kWh/year for this 9.0 cu ft manual-defrost chest freezer. Average draw is 22.9 W. Running and startup watts are not in the listing, so there is no run verdict.
+Outage plan (2026-11-28, cc-1128): Whirlpool 110-120 V, 15/20 A circuit, 32-110 F room range, freezer or 33.8-41 F refrigerator mode; dealer listing 3.5 A. Whirlpool says keep the lid closed if the power is out 24 h or less; FSIS full freezer about 48 h. About 24 h on 1 kWh and 1.9 days on 2 kWh stations with a published motor surge >= 1,200 W.
 
 ## Danby DCF100A5WDB 10 cu ft chest freezer
 
